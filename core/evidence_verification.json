@@ -1,0 +1,10 @@
+{
+  "status": "verified",
+  "schema": "rolecue.core-main-evidence.v1",
+  "runs": 135,
+  "iid_rows": 2700000,
+  "counterfactual_rows": 10800000,
+  "aggregate_metric_checks": 270,
+  "maximum_absolute_metric_error": 1.464939280992894e-13,
+  "evidence_zip_sha256": "2e6a4ade3ae197d959110a5c10e71799bbaea9acc59bde8268aeda4ff38a548b"
+}

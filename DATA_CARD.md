@@ -1,4 +1,4 @@
-# RoleCue data card (v0.1.0rc1)
+# RoleCue data card (v0.1.0rc4)
 
 Both modules are fully synthetic, symbolic English-independent token sequences. They describe a controlled binary Agent/Patient role decision; no natural-language corpus frequency or typological distribution is estimated. A `record_id` is unique within a split file. The model receives `tokens` only and predicts the indicated binary label. All oracle, reliability and latent-event metadata are for generation or evaluation and must stay out of model features.
 
@@ -8,6 +8,8 @@ Both modules are fully synthetic, symbolic English-independent token sequences. 
 | Binding | `tokens`; `label_query_is_agent` | `condition`, `event_group_id`, `event_id`, `candidate_order`, `query_entity`, `version`, `distance`, `depth`, `split`, `surface_seed` | `oracle_p_query_agent`; `oracle_p_first_agent` is provided for inspection |
 
 Core's 128 entity and 24 predicate symbols, seeds, nine reliability conditions, original exclusion inventory and 200,000/20,000/20,000 event allocations are specified in `configs/experiments/synthetic_main_v1.json`. The included Core example is 100 complete held-out event groups from `.75/.75`; it is an interface example, not a substitute for the full generation. The Core generator refuses to overwrite an existing output directory and verifies the included prior-inventory hash.
+
+`core/dataset_checksums.json` records the frozen SHA-256 and byte count for 40 Core generation outputs, including all nine condition files and their validation report. The separate `rolecue_core_main_evidence_v0.1.0rc4.zip` release asset contains compact test and counterfactual prediction fields for each of the 135 formal main runs. Its source-file and packed-member hashes are in `core/evidence_manifest.json`; `core/evidence_verification.json` records the complete scoring check. These prediction records are derived evaluation data, not model inputs. Original checkpoints and full uncompressed prediction JSONL remain outside this compact release.
 
 Binding's 48 entity and 8 predicate symbols, three reliability settings, seeds and 1,600/200/200/200 event-group allocation are in `binding/data/config.json`. Each event is realized in a `local` and `binding` version and queried at both main-candidate positions. Train/dev/test vary `(distance, depth)` over `(1,0)`, `(2,0)` and `(2,1)`; OOD uses `(4,2)`. `binding/data/manifest.json` records SHA-256 and byte size of every frozen data file. `binding/data/information_certificate.json` records the exact observer baselines and counterexample pairs. `src/binding/task.py` contains the visible grammar, parser and probability observer; `src/binding/build.py` contains split assignment and validation.
 

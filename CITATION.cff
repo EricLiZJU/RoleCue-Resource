@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use the RoleCue resource, please cite this software release and the associated paper when available."
 title: "RoleCue: Controlled Role-Cue Reliability and Cross-Position Binding Diagnostics"
 type: software
-version: 0.1.0rc3
+version: 0.1.0rc4
 date-released: 2026-10-15
 authors:
   - given-names: Hongyang
