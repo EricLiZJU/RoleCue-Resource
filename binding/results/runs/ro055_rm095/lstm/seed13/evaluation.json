@@ -1,0 +1,340 @@
+{
+  "run_id": "ro055_rm095/lstm/seed13",
+  "condition": "ro055_rm095",
+  "architecture": "lstm",
+  "seed": 13,
+  "best_epoch": 6,
+  "parameters": 70928,
+  "train_seconds": 7.404937708051875,
+  "dev": {
+    "n": 2400,
+    "accuracy": 0.735,
+    "nll": 0.41473886813042027,
+    "brier": 0.13986398860643146,
+    "oracle_accuracy": 0.97,
+    "oracle_nll": 0.13586534497371197,
+    "oracle_nll_regret": 0.2788735231567083,
+    "oracle_probability_mae": 0.22960177829004902,
+    "oracle_probability_signed_bias": 0.01275869034934121,
+    "oracle_posterior_kl": 0.24876488828683993,
+    "mean_p_query_agent": 0.5127586903493412,
+    "conflict": {
+      "n": 1116,
+      "accuracy": 0.7222222222222222,
+      "oracle_probability_mae": 0.225690458111067,
+      "oracle_probability_signed_bias": 0.015165045894804255,
+      "oracle_posterior_kl": 0.23397380763202785,
+      "mean_p_query_agent": 0.5151650458948043
+    },
+    "aligned": {
+      "n": 1284,
+      "accuracy": 0.7461059190031153,
+      "oracle_probability_mae": 0.23300133695028571,
+      "oracle_probability_signed_bias": 0.010667185062163036,
+      "oracle_posterior_kl": 0.26162068736064864,
+      "mean_p_query_agent": 0.510667185062163
+    }
+  },
+  "splits": {
+    "test": {
+      "all": {
+        "n": 2400,
+        "accuracy": 0.735,
+        "nll": 0.4162506994902025,
+        "brier": 0.13994393752329623,
+        "oracle_accuracy": 0.97,
+        "oracle_nll": 0.14068605167294934,
+        "oracle_nll_regret": 0.27556464781725315,
+        "oracle_probability_mae": 0.22938749841752923,
+        "oracle_probability_signed_bias": 0.01214676389935623,
+        "oracle_posterior_kl": 0.2476554261701609,
+        "mean_p_query_agent": 0.5121467638993562,
+        "conflict": {
+          "n": 1212,
+          "accuracy": 0.7351485148514851,
+          "oracle_probability_mae": 0.22529367942414485,
+          "oracle_probability_signed_bias": 0.014509671888871702,
+          "oracle_posterior_kl": 0.23379313794416623,
+          "mean_p_query_agent": 0.5145096718888716
+        },
+        "aligned": {
+          "n": 1188,
+          "accuracy": 0.7348484848484849,
+          "oracle_probability_mae": 0.23356402082492142,
+          "oracle_probability_signed_bias": 0.00973612039490105,
+          "oracle_posterior_kl": 0.2617977606229433,
+          "mean_p_query_agent": 0.509736120394901
+        }
+      },
+      "cells": {
+        "binding_d1_h0": {
+          "n": 400,
+          "accuracy": 0.5,
+          "nll": 0.6942973510260692,
+          "brier": 0.2505741757569222,
+          "oracle_accuracy": 0.97,
+          "oracle_nll": 0.14068605167294929,
+          "oracle_nll_regret": 0.5536112993531199,
+          "oracle_probability_mae": 0.44902384530199396,
+          "oracle_probability_signed_bias": 0.02281600946408216,
+          "oracle_posterior_kl": 0.49389217603425195,
+          "mean_p_query_agent": 0.5228160094640821,
+          "conflict": {
+            "n": 202,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.43943386653337996,
+            "oracle_probability_signed_bias": 0.02362137323386988,
+            "oracle_posterior_kl": 0.46597673791224675,
+            "mean_p_query_agent": 0.5236213732338698
+          },
+          "aligned": {
+            "n": 198,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.45880756101542836,
+            "oracle_probability_signed_bias": 0.021994375719147155,
+            "oracle_posterior_kl": 0.5223715624011461,
+            "mean_p_query_agent": 0.5219943757191472
+          }
+        },
+        "binding_d2_h0": {
+          "n": 400,
+          "accuracy": 0.5,
+          "nll": 0.6941091349778878,
+          "brier": 0.25048034258208934,
+          "oracle_accuracy": 0.97,
+          "oracle_nll": 0.14068605167294929,
+          "oracle_nll_regret": 0.5534230833049385,
+          "oracle_probability_mae": 0.44897981656392316,
+          "oracle_probability_signed_bias": 0.020805615986152163,
+          "oracle_posterior_kl": 0.49364100218615437,
+          "mean_p_query_agent": 0.5208056159861522,
+          "conflict": {
+            "n": 202,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.439346360241254,
+            "oracle_probability_signed_bias": 0.020971896810035945,
+            "oracle_posterior_kl": 0.46558738099174535,
+            "mean_p_query_agent": 0.520971896810036
+          },
+          "aligned": {
+            "n": 198,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.45880788816583823,
+            "oracle_probability_signed_bias": 0.020635975953704984,
+            "oracle_posterior_kl": 0.5222613632026726,
+            "mean_p_query_agent": 0.520635975953705
+          }
+        },
+        "binding_d2_h1": {
+          "n": 400,
+          "accuracy": 0.5,
+          "nll": 0.6942219040389261,
+          "brier": 0.25053659034546855,
+          "oracle_accuracy": 0.97,
+          "oracle_nll": 0.14068605167294929,
+          "oracle_nll_regret": 0.5535358523659768,
+          "oracle_probability_mae": 0.4490138640182157,
+          "oracle_probability_signed_bias": 0.02215775508213233,
+          "oracle_posterior_kl": 0.49381326445672,
+          "mean_p_query_agent": 0.5221577550821324,
+          "conflict": {
+            "n": 202,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.43937841996250715,
+            "oracle_probability_signed_bias": 0.022562080628849502,
+            "oracle_posterior_kl": 0.46577511770491603,
+            "mean_p_query_agent": 0.5225620806288495
+          },
+          "aligned": {
+            "n": 198,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.45884396350939294,
+            "oracle_probability_signed_bias": 0.021745261342552204,
+            "oracle_posterior_kl": 0.5224178384156312,
+            "mean_p_query_agent": 0.5217452613425523
+          }
+        },
+        "local_d1_h0": {
+          "n": 400,
+          "accuracy": 0.97,
+          "nll": 0.13770901607999952,
+          "brier": 0.02932532171806604,
+          "oracle_accuracy": 0.97,
+          "oracle_nll": 0.14068605167294929,
+          "oracle_nll_regret": -0.0029770355929497616,
+          "oracle_probability_mae": 0.00981797903838695,
+          "oracle_probability_signed_bias": 0.0027133981284727126,
+          "oracle_posterior_kl": 0.0015438549689525316,
+          "mean_p_query_agent": 0.5027133981284727,
+          "conflict": {
+            "n": 202,
+            "accuracy": 0.9702970297029703,
+            "oracle_probability_mae": 0.011196035337606727,
+            "oracle_probability_signed_bias": 0.007360465403437654,
+            "oracle_posterior_kl": 0.001802708016223368,
+            "mean_p_query_agent": 0.5073604654034376
+          },
+          "aligned": {
+            "n": 198,
+            "accuracy": 0.9696969696969697,
+            "oracle_probability_mae": 0.008412083217970812,
+            "oracle_probability_signed_bias": -0.002027549293461219,
+            "oracle_posterior_kl": 0.0012797725671913759,
+            "mean_p_query_agent": 0.49797245070653867
+          }
+        },
+        "local_d2_h0": {
+          "n": 400,
+          "accuracy": 0.97,
+          "nll": 0.13776758159666,
+          "brier": 0.02928840559366969,
+          "oracle_accuracy": 0.97,
+          "oracle_nll": 0.14068605167294929,
+          "oracle_nll_regret": -0.002918470076289287,
+          "oracle_probability_mae": 0.009703241366768344,
+          "oracle_probability_signed_bias": 0.0017461241963893082,
+          "oracle_posterior_kl": 0.0015503352755856339,
+          "mean_p_query_agent": 0.5017461241963893,
+          "conflict": {
+            "n": 202,
+            "accuracy": 0.9702970297029703,
+            "oracle_probability_mae": 0.011385594576978299,
+            "oracle_probability_signed_bias": 0.005248951967147542,
+            "oracle_posterior_kl": 0.001942233102661965,
+            "mean_p_query_agent": 0.5052489519671475
+          },
+          "aligned": {
+            "n": 198,
+            "accuracy": 0.9696969696969697,
+            "oracle_probability_mae": 0.007986901223018797,
+            "oracle_probability_signed_bias": -0.0018274677717579815,
+            "oracle_posterior_kl": 0.0011505203206895792,
+            "mean_p_query_agent": 0.49817253222824204
+          }
+        },
+        "local_d2_h1": {
+          "n": 400,
+          "accuracy": 0.97,
+          "nll": 0.13939920922167232,
+          "brier": 0.029458789143561707,
+          "oracle_accuracy": 0.97,
+          "oracle_nll": 0.14068605167294929,
+          "oracle_nll_regret": -0.0012868424512769705,
+          "oracle_probability_mae": 0.0097862442158873,
+          "oracle_probability_signed_bias": 0.002641680538908669,
+          "oracle_posterior_kl": 0.0014919240993008054,
+          "mean_p_query_agent": 0.5026416805389086,
+          "conflict": {
+            "n": 202,
+            "accuracy": 0.9702970297029703,
+            "oracle_probability_mae": 0.011021799893143013,
+            "oracle_probability_signed_bias": 0.007293263289889772,
+            "oracle_posterior_kl": 0.0016746499372039536,
+            "mean_p_query_agent": 0.5072932632898898
+          },
+          "aligned": {
+            "n": 198,
+            "accuracy": 0.9696969696969697,
+            "oracle_probability_mae": 0.008525727817878945,
+            "oracle_probability_signed_bias": -0.0021038735807791227,
+            "oracle_posterior_kl": 0.0013055068303289069,
+            "mean_p_query_agent": 0.49789612641922093
+          }
+        }
+      },
+      "checkpoint_reload_max_logit_error": 0.0
+    },
+    "ood": {
+      "all": {
+        "n": 800,
+        "accuracy": 0.74,
+        "nll": 0.4049453997577244,
+        "brier": 0.13591589774122412,
+        "oracle_accuracy": 0.98,
+        "oracle_nll": 0.10913404332791408,
+        "oracle_nll_regret": 0.2958113564298103,
+        "oracle_probability_mae": 0.23084404918416898,
+        "oracle_probability_signed_bias": 0.014375024857770168,
+        "oracle_posterior_kl": 0.24836925663507195,
+        "mean_p_query_agent": 0.5143750248577702,
+        "conflict": {
+          "n": 400,
+          "accuracy": 0.735,
+          "oracle_probability_mae": 0.22694481881204934,
+          "oracle_probability_signed_bias": 0.017045273501976422,
+          "oracle_posterior_kl": 0.23379447410705503,
+          "mean_p_query_agent": 0.5170452735019764
+        },
+        "aligned": {
+          "n": 400,
+          "accuracy": 0.745,
+          "oracle_probability_mae": 0.23474327955628865,
+          "oracle_probability_signed_bias": 0.011704776213563903,
+          "oracle_posterior_kl": 0.26294403916308895,
+          "mean_p_query_agent": 0.5117047762135639
+        }
+      },
+      "cells": {
+        "binding_d4_h2": {
+          "n": 400,
+          "accuracy": 0.5,
+          "nll": 0.6943705569875789,
+          "brier": 0.25061072012455426,
+          "oracle_accuracy": 0.98,
+          "oracle_nll": 0.1091340433279141,
+          "oracle_nll_regret": 0.5852365136596648,
+          "oracle_probability_mae": 0.44925109273457253,
+          "oracle_probability_signed_bias": 0.02380102401333138,
+          "oracle_posterior_kl": 0.49451767923880985,
+          "mean_p_query_agent": 0.5238010240133314,
+          "conflict": {
+            "n": 200,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.43880250645616514,
+            "oracle_probability_signed_bias": 0.02375348625498873,
+            "oracle_posterior_kl": 0.4648601969013299,
+            "mean_p_query_agent": 0.5237534862549886
+          },
+          "aligned": {
+            "n": 200,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.45969967901297976,
+            "oracle_probability_signed_bias": 0.023848561771674107,
+            "oracle_posterior_kl": 0.5241751615762897,
+            "mean_p_query_agent": 0.523848561771674
+          }
+        },
+        "local_d4_h2": {
+          "n": 400,
+          "accuracy": 0.98,
+          "nll": 0.11552024252786992,
+          "brier": 0.021221075357893998,
+          "oracle_accuracy": 0.98,
+          "oracle_nll": 0.1091340433279141,
+          "oracle_nll_regret": 0.006386199199955825,
+          "oracle_probability_mae": 0.012437005633765494,
+          "oracle_probability_signed_bias": 0.004949025702208953,
+          "oracle_posterior_kl": 0.00222083403133407,
+          "mean_p_query_agent": 0.5049490257022089,
+          "conflict": {
+            "n": 200,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.015087131167933508,
+            "oracle_probability_signed_bias": 0.010337060748964145,
+            "oracle_posterior_kl": 0.002728751312780095,
+            "mean_p_query_agent": 0.5103370607489641
+          },
+          "aligned": {
+            "n": 200,
+            "accuracy": 0.99,
+            "oracle_probability_mae": 0.009786880099597484,
+            "oracle_probability_signed_bias": -0.0004390093445462384,
+            "oracle_posterior_kl": 0.0017129167498880445,
+            "mean_p_query_agent": 0.49956099065545373
+          }
+        }
+      },
+      "checkpoint_reload_max_logit_error": 0.0
+    }
+  }
+}

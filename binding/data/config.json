@@ -1,0 +1,70 @@
+{
+  "schema_version": "rolecue_binding_v1",
+  "conditions": [
+    [
+      0.55,
+      0.95
+    ],
+    [
+      0.75,
+      0.75
+    ],
+    [
+      0.95,
+      0.55
+    ]
+  ],
+  "sizes_in_semantic_events": {
+    "train": 1600,
+    "dev": 200,
+    "test": 200,
+    "ood": 200
+  },
+  "seed": 20261015,
+  "entities": 48,
+  "predicates": 8,
+  "training_cells": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "test_cells": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "ood_cells": [
+    [
+      4,
+      2
+    ]
+  ],
+  "query_slots": [
+    0,
+    1
+  ],
+  "versions": [
+    "binding",
+    "local"
+  ],
+  "local_suffix_tokens": 9,
+  "split_unit": "unordered entity pair plus predicate; both event orientations stay together"
+}

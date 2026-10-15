@@ -1,0 +1,62 @@
+{
+  "main_summary.json": {
+    "source": "archived-source:summary.json",
+    "sha256": "2302657ff1c88f4e1ab2d60be6dabbcb19aedb31b3d6e6dcc7395f920a4cd7b6"
+  },
+  "main_config.json": {
+    "source": "archived-source:config.json",
+    "sha256": "5398723cca83bc4c5e48425753aa853cb7ede81b759cf1c4ed56378e4d4f2a05"
+  },
+  "main_aggregate.json": {
+    "source": "archived-source:aggregate.json",
+    "sha256": "21d8a644a66545c18187278776134fc3f9f6abcec3632de9c0a8b3f93731b35b"
+  },
+  "mirror_summary.json": {
+    "source": "archived-source:summary.json",
+    "sha256": "46910f7fec7e97f4a2a3db51e0b449795d2e171002f3e30bf236d6dd409db373"
+  },
+  "mirror_config.json": {
+    "source": "archived-source:config.json",
+    "sha256": "c265038ce40d35158502bf38b9760ca8e8abb263724254b6cce99858552ebd49"
+  },
+  "mirror_aggregate.json": {
+    "source": "archived-source:aggregate.json",
+    "sha256": "d1d11a10c5d592374a402e664fb27774ca6835ed4df936d787d0e9bb45296cd5"
+  },
+  "noise_summary.json": {
+    "source": "archived-source:summary.json",
+    "sha256": "2c837e60ab8a42ca1efe28dca48f1d4856f85c1ff25ee32dd7663f6c95108433"
+  },
+  "noise_config.json": {
+    "source": "archived-source:config.json",
+    "sha256": "59a12074e3db8539fb9b1e8300791ecd0096c293a038f2ee97045512870c4d5a"
+  },
+  "noise_aggregate.json": {
+    "source": "archived-source:aggregate.json",
+    "sha256": "f2aaf25bd754325cf2e3ff605bcde86c58fdf37f636224ea23aa07d0ea5b282f"
+  },
+  "e3_summary.json": {
+    "source": "archived-source:summary.json",
+    "sha256": "989a8df024133deefc354982538955c77d27294a1cb584cc8cc7607ab75cf8c1"
+  },
+  "e3_config.json": {
+    "source": "archived-source:config.json",
+    "sha256": "829e17f6d672d2ddb409aaca496868e4207674a74175e7805c6d0a0bf54bac02"
+  },
+  "e3_aggregate.json": {
+    "source": "archived-source:e3_report.json",
+    "sha256": "ca6df2df2889a3ece606ad70934be77e151082f8eee89da1ff5e7d82a9d2f451"
+  },
+  "learned_summary.json": {
+    "source": "archived-source:summary.json",
+    "sha256": "32e39f15692e966581ba6f8ab23ee9fd47a22f70ae92d21c2e2683f8e099ae1f"
+  },
+  "learned_config.json": {
+    "source": "archived-source:config.json",
+    "sha256": "932e06c25627fefef77ec9b8a50553676b0793f62b479e793edb0ce5a151485f"
+  },
+  "learned_aggregate.json": {
+    "source": "archived-source:e3_report.json",
+    "sha256": "0444f27dadaaaf2cba4e287341797ff044dc94db2379aeca528f70de7454a9f1"
+  }
+}

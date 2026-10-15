@@ -1,0 +1,2795 @@
+{
+  "analysis_type": "additional_post_result_exploratory_analysis",
+  "primary_sources": {
+    "main_summary_sha256": "2302657ff1c88f4e1ab2d60be6dabbcb19aedb31b3d6e6dcc7395f920a4cd7b6",
+    "main_config_sha256": "5398723cca83bc4c5e48425753aa853cb7ede81b759cf1c4ed56378e4d4f2a05",
+    "main_manifest_sha256": "8ff003d2133fdd7d6be13199c74ebeb3288cdf920f9f6175a91dc0a3cc55514e"
+  },
+  "design": {
+    "training_repeats": 5,
+    "shared_test_corpus_within_condition": true,
+    "event_group": "predicate plus unordered candidate entity pair",
+    "event_bootstrap": "1000 within-condition resamples of seed-mean event-group scores, trained runs fixed",
+    "training_interval": "two-sided t interval over five run means",
+    "contrasts": "four post-result contrasts, common seed labels as blocks, Holm-adjusted descriptive p-values; no confirmatory claim"
+  },
+  "anchor_results": [
+    {
+      "condition": "ro055_rm095",
+      "architecture": "rnn",
+      "run_ids": [
+        "main/ro055_rm095/rnn/seed11",
+        "main/ro055_rm095/rnn/seed12",
+        "main/ro055_rm095/rnn/seed13",
+        "main/ro055_rm095/rnn/seed14",
+        "main/ro055_rm095/rnn/seed15"
+      ],
+      "metrics": {
+        "nll_regret": {
+          "training_seed_interval": {
+            "mean": 0.0006317888746786098,
+            "sample_sd": 0.0005554474330733038,
+            "ci95": [
+              -5.789020586320767e-05,
+              0.0013214679552204273
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.0009668241883928855,
+              0.0014011049926279445,
+              6.233252479630297e-05,
+              0.00018734621495633948,
+              0.000541336452619577
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.0006317888746786084,
+            "ci95_percentile": [
+              0.0003221898639176861,
+              0.000934692084112674
+            ],
+            "resamples": 1000
+          }
+        },
+        "conflict_mae": {
+          "training_seed_interval": {
+            "mean": 0.00697179529269024,
+            "sample_sd": 0.004066476695948602,
+            "ci95": [
+              0.0019225975797962577,
+              0.012020993005584223
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.009722114910081113,
+              0.011793628772416137,
+              0.001289088169134284,
+              0.005235734364463379,
+              0.00681841024735629
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 7042,
+            "mean": 0.006971795292690241,
+            "ci95_percentile": [
+              0.006947553170199781,
+              0.0069983619303117615
+            ],
+            "resamples": 1000
+          }
+        },
+        "order_deviation": {
+          "training_seed_interval": {
+            "mean": 0.002689661058314246,
+            "sample_sd": 0.00355832531039756,
+            "ci95": [
+              -0.001728583373503647,
+              0.007107905490132139
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.0027861606312026086,
+              0.005004351989978297,
+              0.00031307915324429596,
+              -0.0017790963386011618,
+              0.007123809855747192
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.0026896610583142465,
+            "ci95_percentile": [
+              0.0026482546340274526,
+              0.0027281501434397795
+            ],
+            "resamples": 1000
+          }
+        },
+        "marking_deviation": {
+          "training_seed_interval": {
+            "mean": -0.0078497370546426,
+            "sample_sd": 0.009035971794037704,
+            "ci95": [
+              -0.019069377920083917,
+              0.003369903810798717
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              -0.016272771306944885,
+              -0.018546882084494985,
+              -0.0009775686582790752,
+              0.0013552701286143737,
+              -0.004806733352108429
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": -0.007849737054642597,
+            "ci95_percentile": [
+              -0.007862475514801473,
+              -0.00783692756016564
+            ],
+            "resamples": 1000
+          }
+        }
+      }
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "lstm",
+      "run_ids": [
+        "main/ro055_rm095/lstm/seed11",
+        "main/ro055_rm095/lstm/seed12",
+        "main/ro055_rm095/lstm/seed13",
+        "main/ro055_rm095/lstm/seed14",
+        "main/ro055_rm095/lstm/seed15"
+      ],
+      "metrics": {
+        "nll_regret": {
+          "training_seed_interval": {
+            "mean": 0.0001845958361498577,
+            "sample_sd": 0.00024809516279260566,
+            "ci95": [
+              -0.0001234549956182234,
+              0.0004926466679179389
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              2.1257929949537898e-05,
+              6.817768480812536e-05,
+              0.0002973301673320073,
+              -3.132210996834408e-05,
+              0.000567535508627962
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.00018459583614985738,
+            "ci95_percentile": [
+              -2.6633556051610956e-05,
+              0.00036853142254408686
+            ],
+            "resamples": 1000
+          }
+        },
+        "conflict_mae": {
+          "training_seed_interval": {
+            "mean": 0.004869441282608912,
+            "sample_sd": 0.003142204812838419,
+            "ci95": [
+              0.0009678786915248432,
+              0.008771003873692982
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.0023759656633734433,
+              0.0037604357678993404,
+              0.005891808674958802,
+              0.002439769540779125,
+              0.00987922676603385
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 7042,
+            "mean": 0.004869441282608919,
+            "ci95_percentile": [
+              0.004836932626590534,
+              0.00490157909055324
+            ],
+            "resamples": 1000
+          }
+        },
+        "order_deviation": {
+          "training_seed_interval": {
+            "mean": 0.0037192269381574857,
+            "sample_sd": 0.003266915644355439,
+            "ci95": [
+              -0.00033718460260732247,
+              0.007775638478922294
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.0027922074364781354,
+              3.1902769669981964e-05,
+              0.004042946042240574,
+              0.002788364405991182,
+              0.008940714036407556
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.0037192269381574883,
+            "ci95_percentile": [
+              0.003653574609314134,
+              0.003782759063961158
+            ],
+            "resamples": 1000
+          }
+        },
+        "marking_deviation": {
+          "training_seed_interval": {
+            "mean": -0.0018590971410173299,
+            "sample_sd": 0.005636744064502308,
+            "ci95": [
+              -0.008858039312998615,
+              0.005139845030963956
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.0005114844456970513,
+              0.004439345532648151,
+              -0.0026205351932069585,
+              -0.0008150532282227505,
+              -0.010810727262002143
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": -0.0018590971410173218,
+            "ci95_percentile": [
+              -0.0019208971685269539,
+              -0.0017980058270297935
+            ],
+            "resamples": 1000
+          }
+        }
+      }
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "transformer",
+      "run_ids": [
+        "main/ro055_rm095/transformer/seed11",
+        "main/ro055_rm095/transformer/seed12",
+        "main/ro055_rm095/transformer/seed13",
+        "main/ro055_rm095/transformer/seed14",
+        "main/ro055_rm095/transformer/seed15"
+      ],
+      "metrics": {
+        "nll_regret": {
+          "training_seed_interval": {
+            "mean": 0.00012516247942061422,
+            "sample_sd": 7.933804454194563e-05,
+            "ci95": [
+              2.66512858249935e-05,
+              0.00022367367301623494
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.00018923719631253394,
+              8.067075272692365e-05,
+              8.154422705934488e-06,
+              0.00019199007587194144,
+              0.0001557599494857376
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.00012516247942061462,
+            "ci95_percentile": [
+              -6.402798491371863e-05,
+              0.0003063906314796487
+            ],
+            "resamples": 1000
+          }
+        },
+        "conflict_mae": {
+          "training_seed_interval": {
+            "mean": 0.004397616877695876,
+            "sample_sd": 0.0014020790903235656,
+            "ci95": [
+              0.0026567057486068177,
+              0.0061385280067849345
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.005127654437899951,
+              0.00298058102896206,
+              0.0027778607535141465,
+              0.005689178388657107,
+              0.005412809779446113
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 7042,
+            "mean": 0.004397616877695866,
+            "ci95_percentile": [
+              0.004389614799132353,
+              0.0044056511517981695
+            ],
+            "resamples": 1000
+          }
+        },
+        "order_deviation": {
+          "training_seed_interval": {
+            "mean": 0.005332865794470519,
+            "sample_sd": 0.0016030552045612505,
+            "ci95": [
+              0.00334240985983364,
+              0.007323321729107398
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.006774080737040896,
+              0.006108606384229822,
+              0.002743091419647895,
+              0.004877464603055982,
+              0.006161085828377999
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.005332865794470511,
+            "ci95_percentile": [
+              0.005324774392472759,
+              0.005340714451152667
+            ],
+            "resamples": 1000
+          }
+        },
+        "marking_deviation": {
+          "training_seed_interval": {
+            "mean": -0.0033654135177072345,
+            "sample_sd": 0.0024981359491044004,
+            "ci95": [
+              -0.006467258988328765,
+              -0.0002635680470857039
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              -0.003490668162314691,
+              0.0001471184539324866,
+              -0.002318864900336091,
+              -0.006500066388216233,
+              -0.004664586591601643
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": -0.0033654135177072384,
+            "ci95_percentile": [
+              -0.00337107420488443,
+              -0.003359909907262518
+            ],
+            "resamples": 1000
+          }
+        }
+      }
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "rnn",
+      "run_ids": [
+        "main/ro075_rm075/rnn/seed11",
+        "main/ro075_rm075/rnn/seed12",
+        "main/ro075_rm075/rnn/seed13",
+        "main/ro075_rm075/rnn/seed14",
+        "main/ro075_rm075/rnn/seed15"
+      ],
+      "metrics": {
+        "nll_regret": {
+          "training_seed_interval": {
+            "mean": 0.00028759582266381253,
+            "sample_sd": 0.000424571362115914,
+            "ci95": [
+              -0.0002395791523438525,
+              0.0008147707976714775
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              7.65763385224661e-05,
+              -1.3012746568843676e-05,
+              0.0010137557956021342,
+              0.0003141737140267581,
+              4.6486011736548076e-05
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.00028759582266381264,
+            "ci95_percentile": [
+              7.937087252163293e-05,
+              0.0004989062403776789
+            ],
+            "resamples": 1000
+          }
+        },
+        "conflict_mae": {
+          "training_seed_interval": {
+            "mean": 0.009252945083782016,
+            "sample_sd": 0.005833905554118038,
+            "ci95": [
+              0.0020091945883126527,
+              0.01649669557925138
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.006065182735806833,
+              0.0004554967271523367,
+              0.012606802930901441,
+              0.013365642266236887,
+              0.013771600758812575
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 6067,
+            "mean": 0.009252945083782,
+            "ci95_percentile": [
+              0.00920095941238699,
+              0.00930171382394877
+            ],
+            "resamples": 1000
+          }
+        },
+        "order_deviation": {
+          "training_seed_interval": {
+            "mean": 0.004111313867411431,
+            "sample_sd": 0.012237845965526696,
+            "ci95": [
+              -0.011083978883546279,
+              0.01930660661836914
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.009697389192482536,
+              0.004439398290373392,
+              -0.0082182082559268,
+              0.021375169242671858,
+              -0.006737179132543827
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.004111313867411421,
+            "ci95_percentile": [
+              0.0040510649280009504,
+              0.004173983430380051
+            ],
+            "resamples": 1000
+          }
+        },
+        "marking_deviation": {
+          "training_seed_interval": {
+            "mean": 0.006327384483660456,
+            "sample_sd": 0.010623342952764367,
+            "ci95": [
+              -0.006863238001358754,
+              0.019518006968679665
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              -0.001748379599110719,
+              0.005352286769884409,
+              0.012584701812164647,
+              -0.005356304195434573,
+              0.020804617630798515
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.006327384483660458,
+            "ci95_percentile": [
+              0.006291186827533796,
+              0.006362401186389734
+            ],
+            "resamples": 1000
+          }
+        }
+      }
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "lstm",
+      "run_ids": [
+        "main/ro075_rm075/lstm/seed11",
+        "main/ro075_rm075/lstm/seed12",
+        "main/ro075_rm075/lstm/seed13",
+        "main/ro075_rm075/lstm/seed14",
+        "main/ro075_rm075/lstm/seed15"
+      ],
+      "metrics": {
+        "nll_regret": {
+          "training_seed_interval": {
+            "mean": 7.060079804896496e-05,
+            "sample_sd": 6.0742440438711695e-05,
+            "ci95": [
+              -4.8209034068199446e-06,
+              0.00014602249950474986
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              2.747548169698063e-05,
+              9.91610882735828e-05,
+              6.838662220336163e-05,
+              1.7329728243453767e-06,
+              0.00015624782524655437
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 7.060079804896524e-05,
+            "ci95_percentile": [
+              7.808272711341018e-06,
+              0.00013217464084333373
+            ],
+            "resamples": 1000
+          }
+        },
+        "conflict_mae": {
+          "training_seed_interval": {
+            "mean": 0.003602016574278226,
+            "sample_sd": 0.0021960465468516704,
+            "ci95": [
+              0.0008752646386728058,
+              0.006328768509883646
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.002608226614772085,
+              0.002240683920533342,
+              0.003862050262740767,
+              0.0019861684308529496,
+              0.0073129536424919855
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 6067,
+            "mean": 0.0036020165742782252,
+            "ci95_percentile": [
+              0.003579241274207329,
+              0.003622660997651751
+            ],
+            "resamples": 1000
+          }
+        },
+        "order_deviation": {
+          "training_seed_interval": {
+            "mean": 0.0017104669729851134,
+            "sample_sd": 0.007721120290319551,
+            "ci95": [
+              -0.007876570117305286,
+              0.011297504063275513
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.0057439734344525055,
+              -0.005146119737985545,
+              -0.005020688074703447,
+              -2.048808648376932e-06,
+              0.012977218051810431
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.0017104669729851275,
+            "ci95_percentile": [
+              0.0016759932961660274,
+              0.0017416383030850666
+            ],
+            "resamples": 1000
+          }
+        },
+        "marking_deviation": {
+          "training_seed_interval": {
+            "mean": 0.001370043686952858,
+            "sample_sd": 0.002430417984424549,
+            "ci95": [
+              -0.0016477188248940674,
+              0.004387806198799783
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.004189481501326392,
+              -0.0006531351368050272,
+              0.0026944459149126692,
+              0.002256839281924306,
+              -0.0016374131265940513
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.0013700436869528633,
+            "ci95_percentile": [
+              0.0013388695393330649,
+              0.0014020191462108848
+            ],
+            "resamples": 1000
+          }
+        }
+      }
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "transformer",
+      "run_ids": [
+        "main/ro075_rm075/transformer/seed11",
+        "main/ro075_rm075/transformer/seed12",
+        "main/ro075_rm075/transformer/seed13",
+        "main/ro075_rm075/transformer/seed14",
+        "main/ro075_rm075/transformer/seed15"
+      ],
+      "metrics": {
+        "nll_regret": {
+          "training_seed_interval": {
+            "mean": 0.00013059208383843577,
+            "sample_sd": 0.0001857977336108335,
+            "ci95": [
+              -0.00010010627293399006,
+              0.0003612904406108616
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.00020084106963498934,
+              6.306359566079421e-06,
+              -1.2496337426254823e-05,
+              0.00042638279227426176,
+              3.1926535143103136e-05
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.00013059208383843588,
+            "ci95_percentile": [
+              5.5806308094708875e-06,
+              0.0002539705505122336
+            ],
+            "resamples": 1000
+          }
+        },
+        "conflict_mae": {
+          "training_seed_interval": {
+            "mean": 0.006675048985139367,
+            "sample_sd": 0.00484240388379219,
+            "ci95": [
+              0.0006624104178725096,
+              0.012687687552406225
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.011623032879591936,
+              0.0029450034942447014,
+              0.0016207711671270407,
+              0.011946966088791764,
+              0.00523947129594139
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 6067,
+            "mean": 0.006675048985139385,
+            "ci95_percentile": [
+              0.006629797286350217,
+              0.006720732992795696
+            ],
+            "resamples": 1000
+          }
+        },
+        "order_deviation": {
+          "training_seed_interval": {
+            "mean": 0.007915201832373217,
+            "sample_sd": 0.003567731714312212,
+            "ci95": [
+              0.0034852778074619386,
+              0.012345125857284495
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.013136312651530369,
+              0.00564127132567122,
+              0.004126095960720259,
+              0.009709543215234265,
+              0.006962786008709973
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.007915201832373224,
+            "ci95_percentile": [
+              0.007869184127239257,
+              0.007961079500272618
+            ],
+            "resamples": 1000
+          }
+        },
+        "marking_deviation": {
+          "training_seed_interval": {
+            "mean": -0.00472722603198192,
+            "sample_sd": 0.006006681558736913,
+            "ci95": [
+              -0.012185506272140028,
+              0.0027310542081761873
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              -0.010061343765687202,
+              -0.00024920070207407253,
+              0.0009346598350487502,
+              -0.012239457043279488,
+              -0.002020788483917587
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": -0.00472722603198192,
+            "ci95_percentile": [
+              -0.0047749987701158425,
+              -0.004684423286180977
+            ],
+            "resamples": 1000
+          }
+        }
+      }
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "rnn",
+      "run_ids": [
+        "main/ro095_rm055/rnn/seed11",
+        "main/ro095_rm055/rnn/seed12",
+        "main/ro095_rm055/rnn/seed13",
+        "main/ro095_rm055/rnn/seed14",
+        "main/ro095_rm055/rnn/seed15"
+      ],
+      "metrics": {
+        "nll_regret": {
+          "training_seed_interval": {
+            "mean": 0.0007458432645390549,
+            "sample_sd": 0.0003323677057029707,
+            "ci95": [
+              0.00033315425020209147,
+              0.0011585322788760183
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.00037138439497735637,
+              0.0005430956541422982,
+              0.0011800940229768314,
+              0.0006416008386212861,
+              0.0009930414119775023
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.0007458432645390461,
+            "ci95_percentile": [
+              0.00040991280395904074,
+              0.0010834413508783673
+            ],
+            "resamples": 1000
+          }
+        },
+        "conflict_mae": {
+          "training_seed_interval": {
+            "mean": 0.007298047331504872,
+            "sample_sd": 0.0035637792589761274,
+            "ci95": [
+              0.0028730309280889177,
+              0.011723063734920828
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.003686407723521407,
+              0.005177905375454934,
+              0.006914856143262408,
+              0.013040665593397276,
+              0.00767040182188834
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 7070,
+            "mean": 0.007298047331504702,
+            "ci95_percentile": [
+              0.00726934487627117,
+              0.0073255464871154466
+            ],
+            "resamples": 1000
+          }
+        },
+        "order_deviation": {
+          "training_seed_interval": {
+            "mean": -0.0024743685621890885,
+            "sample_sd": 0.006584025680593839,
+            "ci95": [
+              -0.01064951621303151,
+              0.005700779088653334
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              -0.005461560791353256,
+              -0.009125210961768796,
+              0.005327423785931598,
+              -0.006926847849813001,
+              0.0038143530060580125
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": -0.002474368562189072,
+            "ci95_percentile": [
+              -0.002511685241946653,
+              -0.002436708946914903
+            ],
+            "resamples": 1000
+          }
+        },
+        "marking_deviation": {
+          "training_seed_interval": {
+            "mean": 0.010117973774017127,
+            "sample_sd": 0.012371875490894352,
+            "ci95": [
+              -0.005243738613285941,
+              0.025479686161320195
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              -0.0032514858487657948,
+              -0.003616512602843477,
+              0.019149512750989393,
+              0.01915319793374416,
+              0.01915515663696135
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.010117973774016553,
+            "ci95_percentile": [
+              0.010094540152683417,
+              0.010142250878639776
+            ],
+            "resamples": 1000
+          }
+        }
+      }
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "lstm",
+      "run_ids": [
+        "main/ro095_rm055/lstm/seed11",
+        "main/ro095_rm055/lstm/seed12",
+        "main/ro095_rm055/lstm/seed13",
+        "main/ro095_rm055/lstm/seed14",
+        "main/ro095_rm055/lstm/seed15"
+      ],
+      "metrics": {
+        "nll_regret": {
+          "training_seed_interval": {
+            "mean": 0.0003744400018905694,
+            "sample_sd": 0.0001721451225081412,
+            "ci95": [
+              0.00016069360080583358,
+              0.0005881864029753051
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.00017871061723630057,
+              0.000641862950438611,
+              0.0002939391739901143,
+              0.0004119463539015179,
+              0.0003457409138863027
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.00037444000189056943,
+            "ci95_percentile": [
+              0.00021773360751401252,
+              0.0005268351917351937
+            ],
+            "resamples": 1000
+          }
+        },
+        "conflict_mae": {
+          "training_seed_interval": {
+            "mean": 0.004260745844317417,
+            "sample_sd": 0.0013685643694934138,
+            "ci95": [
+              0.002561448737493008,
+              0.0059600429511418255
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.0033830246439140003,
+              0.006677106017200147,
+              0.003922334010969152,
+              0.003815370087442698,
+              0.0035058944620610893
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 7070,
+            "mean": 0.0042607458443174075,
+            "ci95_percentile": [
+              0.004220322216234957,
+              0.004299982703295896
+            ],
+            "resamples": 1000
+          }
+        },
+        "order_deviation": {
+          "training_seed_interval": {
+            "mean": 0.0036253513488857685,
+            "sample_sd": 0.001713587410537515,
+            "ci95": [
+              0.0014976515534461188,
+              0.005753051144325418
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.0028038737492414646,
+              0.005111932970081915,
+              0.0012109029818659356,
+              0.0053663702058345695,
+              0.0036336768374049576
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 0.0036253513488857677,
+            "ci95_percentile": [
+              0.003556732734194676,
+              0.0036942885374772116
+            ],
+            "resamples": 1000
+          }
+        },
+        "marking_deviation": {
+          "training_seed_interval": {
+            "mean": -0.0014368549731234655,
+            "sample_sd": 0.003565990160924159,
+            "ci95": [
+              -0.00586461657389185,
+              0.002990906627644919
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              -0.00274249629509513,
+              -0.006861781254175952,
+              0.002215468847550543,
+              -0.0008069517607837761,
+              0.0010114855968869866
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": -0.0014368549731234642,
+            "ci95_percentile": [
+              -0.001496849187191386,
+              -0.0013767496351159726
+            ],
+            "resamples": 1000
+          }
+        }
+      }
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "transformer",
+      "run_ids": [
+        "main/ro095_rm055/transformer/seed11",
+        "main/ro095_rm055/transformer/seed12",
+        "main/ro095_rm055/transformer/seed13",
+        "main/ro095_rm055/transformer/seed14",
+        "main/ro095_rm055/transformer/seed15"
+      ],
+      "metrics": {
+        "nll_regret": {
+          "training_seed_interval": {
+            "mean": 2.140464473377515e-05,
+            "sample_sd": 5.1237456767128824e-05,
+            "ci95": [
+              -4.221506069349065e-05,
+              8.502435016104096e-05
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              8.119886086238946e-05,
+              4.7858090916629756e-05,
+              4.207364197826547e-05,
+              -2.5604603168706053e-05,
+              -3.8502766919702886e-05
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": 2.1404644733775317e-05,
+            "ci95_percentile": [
+              -5.591895966075943e-06,
+              5.0133931288943764e-05
+            ],
+            "resamples": 1000
+          }
+        },
+        "conflict_mae": {
+          "training_seed_interval": {
+            "mean": 0.0014509876018303698,
+            "sample_sd": 0.000682807265395485,
+            "ci95": [
+              0.0006031704026768315,
+              0.002298804800983908
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.002139770258417873,
+              0.001070663902173535,
+              0.0007897923908401828,
+              0.0022382750535956918,
+              0.0010164364041245666
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 7070,
+            "mean": 0.0014509876018303702,
+            "ci95_percentile": [
+              0.0014447782190279228,
+              0.0014572897492762269
+            ],
+            "resamples": 1000
+          }
+        },
+        "order_deviation": {
+          "training_seed_interval": {
+            "mean": -0.0004686572069582173,
+            "sample_sd": 0.0013837878385151057,
+            "ci95": [
+              -0.0021868567471946313,
+              0.001249542333278197
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              0.001195560106665498,
+              -0.0005706381358905628,
+              0.0004478333850067808,
+              -0.001012514752214729,
+              -0.0024035266383580734
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": -0.00046865720695821834,
+            "ci95_percentile": [
+              -0.0004770177047775334,
+              -0.00045983595566682374
+            ],
+            "resamples": 1000
+          }
+        },
+        "marking_deviation": {
+          "training_seed_interval": {
+            "mean": -0.00028645147142133145,
+            "sample_sd": 0.002873026532177727,
+            "ci95": [
+              -0.0038537850823106303,
+              0.0032808821394679677
+            ],
+            "n_training_seeds": 5,
+            "seed_values": [
+              -0.003077986674221424,
+              -0.0023741953686443494,
+              0.002029710103432052,
+              0.0034665838017520103,
+              -0.0014763692194249465
+            ]
+          },
+          "conditional_event_interval": {
+            "n_event_groups": 10000,
+            "mean": -0.0002864514714213267,
+            "ci95_percentile": [
+              -0.0002954268803596219,
+              -0.00027776216266104753
+            ],
+            "resamples": 1000
+          }
+        }
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "condition": "ro095_rm055",
+      "metric": "marking_deviation",
+      "left_minus_right": "rnn-lstm",
+      "difference": {
+        "mean": 0.011554828747140592,
+        "sample_sd": 0.009454928868959371,
+        "ci95": [
+          -0.00018501603502371622,
+          0.0232946735293049
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0005089895536706649,
+          0.003245268651332475,
+          0.01693404390343885,
+          0.019960149694527935,
+          0.018143671040074364
+        ]
+      },
+      "p_unadjusted_two_sided": 0.052297806217264334,
+      "p_holm_four_contrasts": 0.15689341865179302
+    },
+    {
+      "condition": "ro095_rm055",
+      "metric": "marking_deviation",
+      "left_minus_right": "rnn-transformer",
+      "difference": {
+        "mean": 0.010404425245438456,
+        "sample_sd": 0.01030934643193294,
+        "ci95": [
+          -0.0023963190641031317,
+          0.023205169554980046
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.00017349917454437085,
+          -0.0012423172341991277,
+          0.01711980264755734,
+          0.015686614131992148,
+          0.020631525856386296
+        ]
+      },
+      "p_unadjusted_two_sided": 0.08699842873529393,
+      "p_holm_four_contrasts": 0.17399685747058785
+    },
+    {
+      "condition": "ro095_rm055",
+      "metric": "conflict_mae",
+      "left_minus_right": "rnn-lstm",
+      "difference": {
+        "mean": 0.0030373014871874554,
+        "sample_sd": 0.004111509141159477,
+        "ci95": [
+          -0.002067811391675955,
+          0.008142414366050866
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.00030338307960740656,
+          -0.0014992006417452134,
+          0.0029925221322932554,
+          0.009225295505954578,
+          0.004164507359827251
+        ]
+      },
+      "p_unadjusted_two_sided": 0.17390848764006972,
+      "p_holm_four_contrasts": 0.17399685747058785
+    },
+    {
+      "condition": "ro095_rm055",
+      "metric": "conflict_mae",
+      "left_minus_right": "rnn-transformer",
+      "difference": {
+        "mean": 0.005847059729674503,
+        "sample_sd": 0.0034206828880658426,
+        "ci95": [
+          0.0015997209382914617,
+          0.010094398521057545
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0015466374651035338,
+          0.004107241473281399,
+          0.006125063752422225,
+          0.010802390539801584,
+          0.006653965417763773
+        ]
+      },
+      "p_unadjusted_two_sided": 0.01874343138952703,
+      "p_holm_four_contrasts": 0.07497372555810812
+    }
+  ],
+  "surface_noise_comparison": [
+    {
+      "condition": "ro055_rm095",
+      "architecture": "rnn",
+      "metric": "oracle_nll_regret",
+      "main": {
+        "mean": 0.0006317888746785683,
+        "sample_sd": 0.0005554474330732815,
+        "ci95": [
+          -5.789020586322144e-05,
+          0.0013214679552203579
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0009668241883928619,
+          0.0014011049926278552,
+          6.233252479628804e-05,
+          0.00018734621495630766,
+          0.0005413364526195286
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.00013160534461243434,
+        "sample_sd": 0.00011221550624035279,
+        "ci95": [
+          -7.728609526421799e-06,
+          0.0002709392987512905
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          9.8810514799208e-06,
+          3.6846094433495846e-05,
+          0.00024728585010380666,
+          0.00011832580369142143,
+          0.00024568792335352696
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -0.000500183530066134,
+        "sample_sd": 0.0006427293933707257,
+        "ci95": [
+          -0.0012982374784019108,
+          0.00029787041826964276
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0009569431369129411,
+          -0.0013642588981943593,
+          0.00018495332530751862,
+          -6.902041126488623e-05,
+          -0.0002956485292660016
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "rnn",
+      "metric": "conflict_oracle_probability_mae",
+      "main": {
+        "mean": 0.006964991983401355,
+        "sample_sd": 0.004058298082615353,
+        "ci95": [
+          0.0019259493602384967,
+          0.012004034606564214
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.009713181712754837,
+          0.011770688420273625,
+          0.0012863346492310737,
+          0.005244281924321313,
+          0.006810473210425929
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.004971743358675936,
+        "sample_sd": 0.001193941284248766,
+        "ci95": [
+          0.0034892694500550736,
+          0.006454217267296798
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0040868065224736825,
+          0.005839231318071651,
+          0.006219414559558043,
+          0.005319162115220592,
+          0.0033941022780557134
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -0.0019932486247254194,
+        "sample_sd": 0.004554820400669752,
+        "ci95": [
+          -0.007648805134521105,
+          0.0036623078850702663
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.005626375190281155,
+          -0.005931457102201974,
+          0.004933079910326969,
+          7.488019089927928e-05,
+          -0.003416370932370216
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "rnn",
+      "metric": "marking_deviation",
+      "main": {
+        "mean": -0.007849737054736128,
+        "sample_sd": 0.009035971794041378,
+        "ci95": [
+          -0.019069377920182005,
+          0.00336990381070975
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.01627277130704574,
+          -0.01854688208459032,
+          -0.000977568658370176,
+          0.0013552701285232116,
+          -0.004806733352197612
+        ]
+      },
+      "new_surface_noise": {
+        "mean": -0.0016617731250754054,
+        "sample_sd": 0.004955887273871997,
+        "ci95": [
+          -0.007815319932198474,
+          0.004491773682047664
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.002309790228182562,
+          0.003200872413268163,
+          -0.007992943785468998,
+          -0.005706884503368981,
+          -0.00011969997798977339
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.006187963929660723,
+        "sample_sd": 0.01367369490120877,
+        "ci95": [
+          -0.010790170751592615,
+          0.02316609861091406
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.018582561535228304,
+          0.021747754497858485,
+          -0.007015375127098822,
+          -0.007062154631892192,
+          0.0046870333742078385
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "lstm",
+      "metric": "oracle_nll_regret",
+      "main": {
+        "mean": 0.00018459583614982567,
+        "sample_sd": 0.0002480951627926006,
+        "ci95": [
+          -0.00012345499561824914,
+          0.0004926466679179005
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          2.125792994950304e-05,
+          6.817768480810171e-05,
+          0.00029733016733196616,
+          -3.132210996836804e-05,
+          0.0005675355086279255
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 9.89025776422181e-05,
+        "sample_sd": 6.246802584011387e-05,
+        "ci95": [
+          2.1338278917686112e-05,
+          0.00017646687636675007
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          1.1430989432709149e-05,
+          7.354808473522545e-05,
+          0.00016968602746550432,
+          0.00014657722106478643,
+          9.327056551286517e-05
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -8.569325850760757e-05,
+        "sample_sd": 0.00024304175149512055,
+        "ci95": [
+          -0.00038746945139948516,
+          0.00021608293438427005
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -9.826940516793892e-06,
+          5.370399927123737e-06,
+          -0.00012764413986646184,
+          0.00017789933103315447,
+          -0.0004742649431150603
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "lstm",
+      "metric": "conflict_oracle_probability_mae",
+      "main": {
+        "mean": 0.004876760597182908,
+        "sample_sd": 0.0031430935417161862,
+        "ci95": [
+          0.0009740945034471516,
+          0.008779426690918664
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0023806717993007757,
+          0.003769749869112011,
+          0.005893638989047114,
+          0.002449528137845809,
+          0.009890214190608832
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.003519424376695558,
+        "sample_sd": 0.0019405633670947962,
+        "ci95": [
+          0.00110989670754087,
+          0.005928952045850247
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0020525935187939532,
+          0.0015420419773961424,
+          0.00490891093978597,
+          0.0029720040869715848,
+          0.00612157136053014
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -0.0013573362204873502,
+        "sample_sd": 0.0016810598562245725,
+        "ci95": [
+          -0.0034446477227870016,
+          0.000729975281812301
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0003280782805068225,
+          -0.0022277078917158685,
+          -0.0009847280492611436,
+          0.0005224759491257759,
+          -0.0037686428300786924
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "lstm",
+      "metric": "marking_deviation",
+      "main": {
+        "mean": -0.0018590971411111435,
+        "sample_sd": 0.0056367440645039455,
+        "ci95": [
+          -0.008858039313094462,
+          0.005139845030872175
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0005114844456048928,
+          0.004439345532558203,
+          -0.0026205351933037413,
+          -0.0008150532283182077,
+          -0.010810727262096864
+        ]
+      },
+      "new_surface_noise": {
+        "mean": -0.0003185652213021584,
+        "sample_sd": 0.002367857334570938,
+        "ci95": [
+          -0.0032586484265216225,
+          0.002621517983917306
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.002407732103703042,
+          0.00020227920403170785,
+          -0.0027007401700300804,
+          0.00018815975235897398,
+          0.0031252072108316487
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.001540531919808985,
+        "sample_sd": 0.0072427809250139325,
+        "ci95": [
+          -0.007452568401657788,
+          0.01053363224127576
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0029192165493079347,
+          -0.004237066328526495,
+          -8.020497672633908e-05,
+          0.0010032129806771817,
+          0.013935934472928513
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "transformer",
+      "metric": "oracle_nll_regret",
+      "main": {
+        "mean": 0.00012516247942057635,
+        "sample_sd": 7.933804454193995e-05,
+        "ci95": [
+          2.665128582496267e-05,
+          0.00022367367301619003
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0001892371963125028,
+          8.067075272688573e-05,
+          8.15442270590827e-06,
+          0.0001919900758718951,
+          0.00015575994948568983
+        ]
+      },
+      "new_surface_noise": {
+        "mean": -6.159383721132672e-06,
+        "sample_sd": 2.6980678619690443e-05,
+        "ci95": [
+          -3.966032101030839e-05,
+          2.7341553568043046e-05
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          3.408241959204639e-05,
+          -2.8067677279031145e-05,
+          -2.0636519293848465e-05,
+          -2.5341972414494318e-05,
+          9.166830789664182e-06
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -0.000131321863141709,
+        "sample_sd": 6.93209423747534e-05,
+        "ci95": [
+          -0.0002173951816099982,
+          -4.524854467341981e-05
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0001551547767204564,
+          -0.00010873843000591688,
+          -2.8790941999756736e-05,
+          -0.0002173320482863894,
+          -0.00014659311869602565
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "transformer",
+      "metric": "conflict_oracle_probability_mae",
+      "main": {
+        "mean": 0.004398231476074802,
+        "sample_sd": 0.0014001849072665406,
+        "ci95": [
+          0.002659672285893659,
+          0.006136790666255944
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.005125773515879876,
+          0.0029806166303210334,
+          0.0027832028956436138,
+          0.0056887283747363545,
+          0.00541283596379313
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.0017292569668851843,
+        "sample_sd": 0.0014957438433194589,
+        "ci95": [
+          -0.0001279543138995229,
+          0.0035864682476698913
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.004261755861329774,
+          0.0013615517079437352,
+          0.0010726014382674998,
+          0.0003302832640903986,
+          0.0016200925627945127
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -0.0026689745091896177,
+        "sample_sd": 0.001855718656769424,
+        "ci95": [
+          -0.004973153556095264,
+          -0.00036479546228397174
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0008640176545501024,
+          -0.0016190649223772982,
+          -0.001710601457376114,
+          -0.005358445110645956,
+          -0.0037927434009986175
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro055_rm095",
+      "architecture": "transformer",
+      "metric": "marking_deviation",
+      "main": {
+        "mean": -0.0033654135178000423,
+        "sample_sd": 0.0024981359491007683,
+        "ci95": [
+          -0.0064672589884170635,
+          -0.00026356804718302143
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.003490668162404731,
+          0.00014711845383263977,
+          -0.002318864900427653,
+          -0.00650006638830436,
+          -0.004664586591696107
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.0002580884519647997,
+        "sample_sd": 0.002433791880524726,
+        "ci95": [
+          -0.0027638633052033948,
+          0.0032800402091329945
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.004215323178115571,
+          8.536034364514666e-05,
+          0.000457107495756226,
+          -0.001611234464233724,
+          -0.0018561142934592212
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.0036235019697648417,
+        "sample_sd": 0.0028823385018093557,
+        "ci95": [
+          4.460602143158262e-05,
+          0.0072023979180981
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.007705991340520302,
+          -6.175811018749311e-05,
+          0.002775972396183879,
+          0.004888831924070636,
+          0.002808472298236886
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "rnn",
+      "metric": "oracle_nll_regret",
+      "main": {
+        "mean": 0.0002875958226638553,
+        "sample_sd": 0.0004245713621158569,
+        "ci95": [
+          -0.00023957915234373872,
+          0.0008147707976714493
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          7.65763385225382e-05,
+          -1.3012746568785705e-05,
+          0.0010137557956020893,
+          0.0003141737140267553,
+          4.6486011736679433e-05
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.0002156081965043577,
+        "sample_sd": 0.00017278285438327687,
+        "ci95": [
+          1.0699467097589801e-06,
+          0.0004301464462989564
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.00036764948383677387,
+          0.00018739400587342026,
+          0.00011631468364475817,
+          -3.2293041395403677e-06,
+          0.00040991211330637656
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -7.198762615949761e-05,
+        "sample_sd": 0.000533197690219488,
+        "ci95": [
+          -0.0007340400020304404,
+          0.0005900647497114451
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.00029107314531423567,
+          0.00020040675244220596,
+          -0.0008974411119573311,
+          -0.0003174030181662957,
+          0.0003634261015696971
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "rnn",
+      "metric": "conflict_oracle_probability_mae",
+      "main": {
+        "mean": 0.009265533982809996,
+        "sample_sd": 0.005843377415507481,
+        "ci95": [
+          0.002010022618057385,
+          0.01652104534756261
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.006063538839199728,
+          0.00045566844118953944,
+          0.01267144734056113,
+          0.013365623175813128,
+          0.013771392117286452
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.013534636265553113,
+        "sample_sd": 0.004653076392760754,
+        "ci95": [
+          0.007757078827770236,
+          0.019312193703335992
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.01395964025321421,
+          0.010662845810419038,
+          0.018427269636309612,
+          0.007249710936098989,
+          0.01737371469172372
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.004269102282743118,
+        "sample_sd": 0.006303160251792761,
+        "ci95": [
+          -0.00355730487681694,
+          0.012095509442303178
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.007896101414014482,
+          0.010207177369229499,
+          0.005755822295748482,
+          -0.006115912239714139,
+          0.0036023225744372667
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "rnn",
+      "metric": "marking_deviation",
+      "main": {
+        "mean": 0.006327384483516385,
+        "sample_sd": 0.010623342952765142,
+        "ci95": [
+          -0.006863238001503787,
+          0.019518006968536557
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0017483795992562223,
+          0.005352286769739534,
+          0.012584701812020593,
+          -0.005356304195578199,
+          0.02080461763065622
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.004981363526294314,
+        "sample_sd": 0.013579139976446225,
+        "ci95": [
+          -0.011879365709028505,
+          0.02184209276161713
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.013359923413100827,
+          -0.005279870536081088,
+          0.01752902522288552,
+          0.01519435617465259,
+          0.010823230183115373
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -0.0013460209572220716,
+        "sample_sd": 0.014010852290741182,
+        "ci95": [
+          -0.01874279183078617,
+          0.016050749916342026
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.011611543813844605,
+          -0.010632157305820622,
+          0.004944323410864926,
+          0.02055066037023079,
+          -0.009981387447540846
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "lstm",
+      "metric": "oracle_nll_regret",
+      "main": {
+        "mean": 7.060079804902531e-05,
+        "sample_sd": 6.0742440438746965e-05,
+        "ci95": [
+          -4.820903406803397e-06,
+          0.00014602249950485403
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          2.7475481697014636e-05,
+          9.916108827368042e-05,
+          6.838662220343128e-05,
+          1.7329728243531406e-06,
+          0.00015624782524664704
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.00015509804785744928,
+        "sample_sd": 0.000115678472327766,
+        "ci95": [
+          1.1464253400851582e-05,
+          0.00029873184231404696
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0003413449251000733,
+          0.00019396631730100866,
+          6.612326816302083e-05,
+          7.85489786983562e-05,
+          9.550675002478748e-05
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 8.449724980842399e-05,
+        "sample_sd": 0.00014265205271585534,
+        "ci95": [
+          -9.262866831871943e-05,
+          0.0002616231679355674
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.00031386944340305867,
+          9.480522902732824e-05,
+          -2.263354040410448e-06,
+          7.681600587400306e-05,
+          -6.0741075221859564e-05
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "lstm",
+      "metric": "conflict_oracle_probability_mae",
+      "main": {
+        "mean": 0.0036064984445146166,
+        "sample_sd": 0.0021955536281176935,
+        "ci95": [
+          0.0008803585483552158,
+          0.0063326383406740175
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0026044607002996727,
+          0.002245691005208138,
+          0.003867367501987664,
+          0.0019977175395949434,
+          0.0073172554754826645
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.004170874879912129,
+        "sample_sd": 0.0006977440799126671,
+        "ci95": [
+          0.0033045111759247587,
+          0.005037238583899499
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.004844987743344573,
+          0.004317616276443612,
+          0.003483239368386711,
+          0.004807724744004883,
+          0.003400806267380871
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.0005643764353975133,
+        "sample_sd": 0.00278848082598484,
+        "ci95": [
+          -0.002897979815909364,
+          0.004026732686704391
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0022405270430449,
+          0.002071925271235474,
+          -0.0003841281336009533,
+          0.0028100072044099397,
+          -0.003916449208101793
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "lstm",
+      "metric": "marking_deviation",
+      "main": {
+        "mean": 0.001370043686808109,
+        "sample_sd": 0.0024304179844252933,
+        "ci95": [
+          -0.0016477188250397401,
+          0.004387806198655958
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.004189481501182923,
+          -0.0006531351369498672,
+          0.0026944459147686395,
+          0.002256839281778722,
+          -0.0016374131267398728
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.002494814894606967,
+        "sample_sd": 0.0012715235912882622,
+        "ci95": [
+          0.0009160098284375718,
+          0.004073619960776363
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.002631164544622866,
+          0.003103901083809091,
+          0.0014326294354720104,
+          0.004218294916590759,
+          0.001088084492540109
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.001124771207798858,
+        "sample_sd": 0.002402391925726947,
+        "ci95": [
+          -0.0018581923559517093,
+          0.004107734771549425
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0015583169565600574,
+          0.003757036220758958,
+          -0.001261816479296629,
+          0.001961455634812037,
+          0.002725497619279982
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "transformer",
+      "metric": "oracle_nll_regret",
+      "main": {
+        "mean": 0.00013059208383846553,
+        "sample_sd": 0.00018579773361085636,
+        "ci95": [
+          -0.00010010627293398873,
+          0.0003612904406109198
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.00020084106963508264,
+          6.306359566166098e-06,
+          -1.249633742628209e-05,
+          0.00042638279227430465,
+          3.1926535143056434e-05
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 7.995156022232442e-05,
+        "sample_sd": 8.60946291697316e-05,
+        "ci95": [
+          -2.6949041256435147e-05,
+          0.000186852161701084
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -2.4788783384355195e-05,
+          0.00019579608687181338,
+          2.1908509536205933e-05,
+          8.357127901786887e-05,
+          0.00012327070907008908
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -5.064052361614113e-05,
+        "sample_sd": 0.00022418745470780061,
+        "ci95": [
+          -0.00032900601497575465,
+          0.00022772496774347238
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.00022562985301943783,
+          0.00018948972730564728,
+          3.440484696248802e-05,
+          -0.0003428115132564358,
+          9.134417392703265e-05
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "transformer",
+      "metric": "conflict_oracle_probability_mae",
+      "main": {
+        "mean": 0.006683191206183785,
+        "sample_sd": 0.00485259454883381,
+        "ci95": [
+          0.0006578992570169936,
+          0.012708483155350576
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.011617614054222267,
+          0.002944110457299359,
+          0.0016188973551830134,
+          0.011988866845783345,
+          0.005246467318430938
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.00872953191067329,
+        "sample_sd": 0.0038753655225268126,
+        "ci95": [
+          0.0039176300614716195,
+          0.013541433759874962
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.007557223774598438,
+          0.0057652469891357905,
+          0.00859914527791609,
+          0.01537921383313851,
+          0.006346829678577623
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.0020463407044895056,
+        "sample_sd": 0.004029179204285532,
+        "ci95": [
+          -0.0029565460557831385,
+          0.00704922746476215
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.004060390279623829,
+          0.0028211365318364314,
+          0.006980247922733077,
+          0.0033903469873551653,
+          0.0011003623601466847
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro075_rm075",
+      "architecture": "transformer",
+      "metric": "marking_deviation",
+      "main": {
+        "mean": -0.004727226032127263,
+        "sample_sd": 0.006006681558736265,
+        "ci95": [
+          -0.012185506272284567,
+          0.0027310542080300412
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.010061343765831954,
+          -0.00024920070221912116,
+          0.0009346598349022628,
+          -0.012239457043424051,
+          -0.0020207884840634516
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.006156749557530284,
+        "sample_sd": 0.005332001930176462,
+        "ci95": [
+          -0.00046380527752282186,
+          0.01277730439258339
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.007266210644132409,
+          0.0006127804347419996,
+          0.007114481226372649,
+          0.014010415490116945,
+          0.0017798599922874137
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.010883975589657546,
+        "sample_sd": 0.010611002066579984,
+        "ci95": [
+          -0.0022913236612805855,
+          0.024059274840595675
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.017327554409964363,
+          0.0008619811369611208,
+          0.006179821391470386,
+          0.026249872533540997,
+          0.0038006484763508652
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "rnn",
+      "metric": "oracle_nll_regret",
+      "main": {
+        "mean": 0.0007458432645390756,
+        "sample_sd": 0.0003323677057029784,
+        "ci95": [
+          0.00033315425020210264,
+          0.0011585322788760484
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.00037138439497735876,
+          0.0005430956541423171,
+          0.0011800940229768353,
+          0.0006416008386213035,
+          0.0009930414119775632
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.0007707409405084131,
+        "sample_sd": 0.00034633636573006113,
+        "ci95": [
+          0.00034070754391266354,
+          0.0012007743371041627
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.000873002105487769,
+          0.0006727262086427266,
+          0.0012156789990804828,
+          0.00026253095048209274,
+          0.0008297664388489945
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 2.489767596933756e-05,
+        "sample_sd": 0.00033050867018987736,
+        "ci95": [
+          -0.0003854830408996356,
+          0.0004352783928383107
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0005016177105104103,
+          0.0001296305545004095,
+          3.5584976103647525e-05,
+          -0.0003790698881392107,
+          -0.00016327497312856876
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "rnn",
+      "metric": "conflict_oracle_probability_mae",
+      "main": {
+        "mean": 0.007296577055119771,
+        "sample_sd": 0.0035675289268573174,
+        "ci95": [
+          0.0028669048240905224,
+          0.011726249286149019
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.00367723697678075,
+          0.005177023051162639,
+          0.006914377675050182,
+          0.013043845752180315,
+          0.007670401820424969
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.008862385554916042,
+        "sample_sd": 0.004632458895970443,
+        "ci95": [
+          0.0031104281206307764,
+          0.014614342989201308
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.005434345975838433,
+          0.011266417089828049,
+          0.01060731869841229,
+          0.0028009046514759052,
+          0.01420294135902554
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.0015658084997962729,
+        "sample_sd": 0.006876392570244267,
+        "ci95": [
+          -0.0069723605921918974,
+          0.010103977591784443
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0017571089990576828,
+          0.00608939403866541,
+          0.003692941023362109,
+          -0.010242941100704409,
+          0.006532539538600572
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "rnn",
+      "metric": "marking_deviation",
+      "main": {
+        "mean": 0.010117973774020886,
+        "sample_sd": 0.012371875490893835,
+        "ci95": [
+          -0.00524373861328154,
+          0.02547968616132331
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0032514858487614033,
+          -0.003616512602839215,
+          0.01914951275099382,
+          0.019153197933748537,
+          0.019155156636962694
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.009196152325760893,
+        "sample_sd": 0.007621784687904633,
+        "ci95": [
+          -0.0002675433232710196,
+          0.018659847974792806
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0029691029954679003,
+          0.015090833829753611,
+          0.01915515687539095,
+          0.0018016370519386878,
+          0.006964030876253325
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -0.0009218214482599917,
+        "sample_sd": 0.014440498661839543,
+        "ci95": [
+          -0.018852068752775817,
+          0.017008425856255834
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.006220588844229304,
+          0.018707346432592826,
+          5.644124397130579e-06,
+          -0.01735156088180985,
+          -0.01219112576070937
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "lstm",
+      "metric": "oracle_nll_regret",
+      "main": {
+        "mean": 0.0003744400018905858,
+        "sample_sd": 0.00017214512250814256,
+        "ci95": [
+          0.00016069360080584832,
+          0.0005881864029753233
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0001787106172363162,
+          0.0006418629504386375,
+          0.0002939391739901487,
+          0.00041194635390151557,
+          0.000345740913886311
+        ]
+      },
+      "new_surface_noise": {
+        "mean": -3.8113533972689015e-05,
+        "sample_sd": 0.00014175488742841294,
+        "ci95": [
+          -0.00021412547426197704,
+          0.00013789840631659903
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          7.54164339911989e-05,
+          -0.00027850673828758166,
+          -4.036178355051878e-05,
+          3.663235114137464e-07,
+          5.25180944720427e-05
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -0.00041255353586327483,
+        "sample_sd": 0.000305729793242987,
+        "ci95": [
+          -0.000792167213311373,
+          -3.293985841517673e-05
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.0001032941832451173,
+          -0.0009203696887262192,
+          -0.00033430095754066746,
+          -0.0004115800303901018,
+          -0.0002932228194142683
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "lstm",
+      "metric": "conflict_oracle_probability_mae",
+      "main": {
+        "mean": 0.004254149416316188,
+        "sample_sd": 0.0013665078835008873,
+        "ci95": [
+          0.0025574057741115093,
+          0.005950893058520866
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0033889502565583726,
+          0.006667435534773837,
+          0.003917815226958214,
+          0.0038056938580300825,
+          0.003490852205260433
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.0042926567003724525,
+        "sample_sd": 0.0005173342589333346,
+        "ci95": [
+          0.0036503013760175057,
+          0.0049350120247274
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.004709249533992258,
+          0.004841376520223069,
+          0.003931145656325656,
+          0.00361464588156566,
+          0.004366865909755623
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 3.8507284056265355e-05,
+        "sample_sd": 0.0012118523726210705,
+        "ci95": [
+          -0.0014662061781651338,
+          0.0015432207462776645
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0013202992774338854,
+          -0.0018260590145507682,
+          1.333042936744154e-05,
+          -0.00019104797646442252,
+          0.0008760137044951906
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "lstm",
+      "metric": "marking_deviation",
+      "main": {
+        "mean": -0.0014368549731191955,
+        "sample_sd": 0.0035659901609241427,
+        "ci95": [
+          -0.00586461657388756,
+          0.002990906627649169
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.002742496295090928,
+          -0.006861781254171643,
+          0.0022154688475547503,
+          -0.00080695176077945,
+          0.0010114855968912928
+        ]
+      },
+      "new_surface_noise": {
+        "mean": -8.80347117536609e-05,
+        "sample_sd": 0.004176824537465145,
+        "ci95": [
+          -0.005274247366738231,
+          0.005098177943230909
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.004499726334411626,
+          -0.002752083305826644,
+          0.0008661799551045839,
+          -0.005804087740561261,
+          0.002750091198103391
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.0013488202613655346,
+        "sample_sd": 0.004744932120348099,
+        "ci95": [
+          -0.004542791126391361,
+          0.007240431649122431
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.007242222629502554,
+          0.004109697948344999,
+          -0.0013492888924501664,
+          -0.004997135979781811,
+          0.0017386056012120982
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "transformer",
+      "metric": "oracle_nll_regret",
+      "main": {
+        "mean": 2.140464473378567e-05,
+        "sample_sd": 5.123745676711506e-05,
+        "ci95": [
+          -4.221506069346305e-05,
+          8.50243501610344e-05
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          8.119886086238592e-05,
+          4.78580909166193e-05,
+          4.2073641978279674e-05,
+          -2.5604603168666307e-05,
+          -3.8502766919690234e-05
+        ]
+      },
+      "new_surface_noise": {
+        "mean": -5.629850575803452e-05,
+        "sample_sd": 6.951456024541814e-05,
+        "ci95": [
+          -0.000142612232565737,
+          3.0015221049667973e-05
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.00010309567173613643,
+          -0.00011051498210454258,
+          -0.00010517770475887422,
+          1.6687032302620253e-06,
+          3.5627126579118595e-05
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -7.770315049182019e-05,
+        "sample_sd": 0.000119142394312522,
+        "ci95": [
+          -0.00022563797216947594,
+          7.023167118583556e-05
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.00018429453259852235,
+          -0.00015837307302116188,
+          -0.0001472513467371539,
+          2.7273306398928332e-05,
+          7.412989349880883e-05
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "transformer",
+      "metric": "conflict_oracle_probability_mae",
+      "main": {
+        "mean": 0.0014502776367801688,
+        "sample_sd": 0.0006830535912466114,
+        "ci95": [
+          0.00060215458368546,
+          0.0022984006898748776
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0021386660039903614,
+          0.0010690554980700203,
+          0.0007898835118294831,
+          0.0022386654800115053,
+          0.0010151176899994745
+        ]
+      },
+      "new_surface_noise": {
+        "mean": 0.003054710432949705,
+        "sample_sd": 0.0016400331950478548,
+        "ci95": [
+          0.0010183402587996882,
+          0.0050910806070997225
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0033886965507451605,
+          0.0013057601829382425,
+          0.0018895169355350586,
+          0.005549401059979292,
+          0.0031401774355507743
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": 0.0016044327961695366,
+        "sample_sd": 0.0011655068808992845,
+        "ci95": [
+          0.00015726486249813005,
+          0.003051600729840943
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.001250030546754799,
+          0.00023670468486822215,
+          0.0010996334237055754,
+          0.003310735579967787,
+          0.0021250597455513
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    },
+    {
+      "condition": "ro095_rm055",
+      "architecture": "transformer",
+      "metric": "marking_deviation",
+      "main": {
+        "mean": -0.00028645147141695556,
+        "sample_sd": 0.0028730265321777397,
+        "ci95": [
+          -0.0038537850823062696,
+          0.0032808821394723587
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          -0.003077986674217093,
+          -0.002374195368639885,
+          0.0020297101034364266,
+          0.003466583801756417,
+          -0.001476369219420643
+        ]
+      },
+      "new_surface_noise": {
+        "mean": -0.00042871454113618536,
+        "sample_sd": 0.0019154727499254129,
+        "ci95": [
+          -0.002807088094258937,
+          0.0019496590119865663
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.00028615944722092806,
+          -0.002131048097483549,
+          -0.0025050942153394054,
+          3.966122470943148e-05,
+          0.002166748935211668
+        ]
+      },
+      "observed_noise_difference": {
+        "mean": -0.0001422630697192298,
+        "sample_sd": 0.0037701447009399185,
+        "ci95": [
+          -0.004823516012895032,
+          0.004538989873456573
+        ],
+        "n_training_seeds": 5,
+        "seed_values": [
+          0.0033641461214380212,
+          0.00024314727115633608,
+          -0.004534804318775832,
+          -0.0034269225770469855,
+          0.003643118154632311
+        ]
+      },
+      "note": "Two fixed surface realizations on shared semantic groups; difference is not a confidence interval over future noise realizations."
+    }
+  ],
+  "e3_tail_summary": [
+    {
+      "condition": "ro055_rm095",
+      "position": "sinusoidal",
+      "run_ids": [
+        "formal/ro055_rm095/transformer/seed11",
+        "formal/ro055_rm095/transformer/seed12",
+        "formal/ro055_rm095/transformer/seed13",
+        "formal/ro055_rm095/transformer/seed14",
+        "formal/ro055_rm095/transformer/seed15"
+      ],
+      "seed_values": [
+        0.00233403067505355,
+        0.0006842880479485419,
+        0.0003987689072250773,
+        0.001840587094403989,
+        0.4343606378311924
+      ],
+      "mean": 0.08792366251116471,
+      "median": 0.001840587094403989,
+      "max": 0.4343606378311924,
+      "count_above_5pp": 1
+    },
+    {
+      "condition": "ro055_rm095",
+      "position": "learned",
+      "run_ids": [
+        "formal/ro055_rm095/transformer/seed11",
+        "formal/ro055_rm095/transformer/seed12",
+        "formal/ro055_rm095/transformer/seed13",
+        "formal/ro055_rm095/transformer/seed14",
+        "formal/ro055_rm095/transformer/seed15"
+      ],
+      "seed_values": [
+        0.000140560564142352,
+        0.0016242870473140263,
+        0.0003814245912129786,
+        0.0017734729543415404,
+        0.0014056822166918725
+      ],
+      "mean": 0.0010650854747405538,
+      "median": 0.0014056822166918725,
+      "max": 0.0017734729543415404,
+      "count_above_5pp": 0
+    },
+    {
+      "condition": "ro075_rm075",
+      "position": "sinusoidal",
+      "run_ids": [
+        "formal/ro075_rm075/transformer/seed11",
+        "formal/ro075_rm075/transformer/seed12",
+        "formal/ro075_rm075/transformer/seed13",
+        "formal/ro075_rm075/transformer/seed14",
+        "formal/ro075_rm075/transformer/seed15"
+      ],
+      "seed_values": [
+        0.004968241143836779,
+        0.0032896687558833355,
+        0.003140936619597944,
+        0.002007444063948935,
+        0.09322675491774564
+      ],
+      "mean": 0.021326609100202527,
+      "median": 0.0032896687558833355,
+      "max": 0.09322675491774564,
+      "count_above_5pp": 1
+    },
+    {
+      "condition": "ro075_rm075",
+      "position": "learned",
+      "run_ids": [
+        "formal/ro075_rm075/transformer/seed11",
+        "formal/ro075_rm075/transformer/seed12",
+        "formal/ro075_rm075/transformer/seed13",
+        "formal/ro075_rm075/transformer/seed14",
+        "formal/ro075_rm075/transformer/seed15"
+      ],
+      "seed_values": [
+        0.004661932303585286,
+        0.0056293998180000455,
+        0.003082492663021444,
+        0.004984830080691228,
+        0.004312522440581859
+      ],
+      "mean": 0.004534235461175973,
+      "median": 0.004661932303585286,
+      "max": 0.0056293998180000455,
+      "count_above_5pp": 0
+    },
+    {
+      "condition": "ro095_rm055",
+      "position": "sinusoidal",
+      "run_ids": [
+        "formal/ro095_rm055/transformer/seed11",
+        "formal/ro095_rm055/transformer/seed12",
+        "formal/ro095_rm055/transformer/seed13",
+        "formal/ro095_rm055/transformer/seed14",
+        "formal/ro095_rm055/transformer/seed15"
+      ],
+      "seed_values": [
+        0.004965314070786676,
+        0.0035629984372458922,
+        0.0019494782744616554,
+        0.004762001074935934,
+        0.004397820635060725
+      ],
+      "mean": 0.003927522498498177,
+      "median": 0.004397820635060725,
+      "max": 0.004965314070786676,
+      "count_above_5pp": 0
+    },
+    {
+      "condition": "ro095_rm055",
+      "position": "learned",
+      "run_ids": [
+        "formal/ro095_rm055/transformer/seed11",
+        "formal/ro095_rm055/transformer/seed12",
+        "formal/ro095_rm055/transformer/seed13",
+        "formal/ro095_rm055/transformer/seed14",
+        "formal/ro095_rm055/transformer/seed15"
+      ],
+      "seed_values": [
+        0.0037496326634783124,
+        0.0034694555254498436,
+        0.0029682142078138914,
+        0.0024921292929119556,
+        0.0030210176324123638
+      ],
+      "mean": 0.0031400898644132736,
+      "median": 0.0030210176324123638,
+      "max": 0.0037496326634783124,
+      "count_above_5pp": 0
+    }
+  ]
+}

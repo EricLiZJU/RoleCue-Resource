@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rolecue-resource"
+version = "0.1.0rc3"
+description = "Controlled role-cue and queried-entity binding evaluation resource"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  {name = "Hongyang Li", email = "hongyangli@zju.edu.cn"},
+  {name = "Chao Wu", email = "chao.wu@zju.edu.cn"},
+]
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.optional-dependencies]
+train = ["numpy", "torch"]
+plots = ["numpy", "matplotlib"]
+
+[project.scripts]
+rolecue = "src.release.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

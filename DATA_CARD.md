@@ -1,0 +1,14 @@
+# RoleCue data card (v0.1.0rc1)
+
+Both modules are fully synthetic, symbolic English-independent token sequences. They describe a controlled binary Agent/Patient role decision; no natural-language corpus frequency or typological distribution is estimated. A `record_id` is unique within a split file. The model receives `tokens` only and predicts the indicated binary label. All oracle, reliability and latent-event metadata are for generation or evaluation and must stay out of model features.
+
+| Module | Input and target | Main metadata | Reference probability |
+|---|---|---|---|
+| Core | `tokens`; `label_first_is_agent` | `condition_id`, `event_group_id`, `event_id`, `candidate_order`, `cue_conflict`, `marker_direction`, `split`, `sampling_law`, `variant`, `pair_id` | `oracle.evaluation_p_first_agent` for evaluation; the training reference is separately named `oracle.training_p_first_agent` |
+| Binding | `tokens`; `label_query_is_agent` | `condition`, `event_group_id`, `event_id`, `candidate_order`, `query_entity`, `version`, `distance`, `depth`, `split`, `surface_seed` | `oracle_p_query_agent`; `oracle_p_first_agent` is provided for inspection |
+
+Core's 128 entity and 24 predicate symbols, seeds, nine reliability conditions, original exclusion inventory and 200,000/20,000/20,000 event allocations are specified in `configs/experiments/synthetic_main_v1.json`. The included Core example is 100 complete held-out event groups from `.75/.75`; it is an interface example, not a substitute for the full generation. The Core generator refuses to overwrite an existing output directory and verifies the included prior-inventory hash.
+
+Binding's 48 entity and 8 predicate symbols, three reliability settings, seeds and 1,600/200/200/200 event-group allocation are in `binding/data/config.json`. Each event is realized in a `local` and `binding` version and queried at both main-candidate positions. Train/dev/test vary `(distance, depth)` over `(1,0)`, `(2,0)` and `(2,1)`; OOD uses `(4,2)`. `binding/data/manifest.json` records SHA-256 and byte size of every frozen data file. `binding/data/information_certificate.json` records the exact observer baselines and counterexample pairs. `src/binding/task.py` contains the visible grammar, parser and probability observer; `src/binding/build.py` contains split assignment and validation.
+
+The split key in both modules is the predicate and unordered pair of main entities, keeping reversed events and variants together. Neither data set contains a human-authored linguistic acceptability judgment. The construction uses separated markers and explicit boundaries, and Binding OOD changes depth and length jointly. Results should not be read as evidence of natural-language transfer. The resource includes original software under MIT and original synthetic data under CC BY 4.0; excluded third-party material is listed in `THIRD_PARTY.md`.

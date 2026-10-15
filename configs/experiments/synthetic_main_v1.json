@@ -1,0 +1,72 @@
+{
+  "schema_version": "rolecue.synthetic.v1",
+  "generator_version": "2.0.0",
+  "entities": 128,
+  "predicates": 24,
+  "canonical_direction": 1,
+  "seeds": {
+    "events": 20261020,
+    "surface": 20261021,
+    "export": 20261022
+  },
+  "excluded_inventory": {
+    "path": "core/prior_inventory/events.jsonl",
+    "sha256": "bd84b43e2ab7a6415d7accba39ed2c2f0de2a29f1d01c647a4b9e8bd3877e7dc",
+    "reason": "Exclude every unordered entity-pair plus predicate group observed in smoke/pilot before allocating formal splits."
+  },
+  "stages": {
+    "main": {
+      "train": 200000,
+      "dev": 20000,
+      "test": 20000
+    }
+  },
+  "conditions": [
+    {
+      "id": "ro055_rm055",
+      "r_o": 0.55,
+      "r_m": 0.55
+    },
+    {
+      "id": "ro055_rm075",
+      "r_o": 0.55,
+      "r_m": 0.75
+    },
+    {
+      "id": "ro055_rm095",
+      "r_o": 0.55,
+      "r_m": 0.95
+    },
+    {
+      "id": "ro075_rm055",
+      "r_o": 0.75,
+      "r_m": 0.55
+    },
+    {
+      "id": "ro075_rm075",
+      "r_o": 0.75,
+      "r_m": 0.75
+    },
+    {
+      "id": "ro075_rm095",
+      "r_o": 0.75,
+      "r_m": 0.95
+    },
+    {
+      "id": "ro095_rm055",
+      "r_o": 0.95,
+      "r_m": 0.55
+    },
+    {
+      "id": "ro095_rm075",
+      "r_o": 0.95,
+      "r_m": 0.75
+    },
+    {
+      "id": "ro095_rm095",
+      "r_o": 0.95,
+      "r_m": 0.95
+    }
+  ],
+  "boundary_conditions": []
+}

@@ -1,0 +1,77 @@
+{
+  "status": "validated",
+  "version": "rolecue_binding_v1",
+  "created_utc": "2026-10-15T07:03:55.248843+00:00",
+  "files": {
+    "config.json": {
+      "sha256": "9f1003886e1eaf494e15ee42c88d360c78b49f118ddf011a6f6a951049e4a5c0",
+      "bytes": 823
+    },
+    "information_certificate.json": {
+      "sha256": "9402126b5f1317c99d6a8177b96bb1f03370968b28ccd61a6eee1d2570c0090d",
+      "bytes": 24594
+    },
+    "inventory.jsonl": {
+      "sha256": "d8be51d4e7e0a580a190209ccc54c23096db599887b216f88c2951bbc14ad9a5",
+      "bytes": 267400
+    },
+    "ro055_rm095/dev.jsonl": {
+      "sha256": "9f5c2a02996156532f0ee6db20c990ac34fbd33cd8ec95e66c217a0c958620f9",
+      "bytes": 1668200
+    },
+    "ro055_rm095/ood.jsonl": {
+      "sha256": "0d0ea90cb4008a84fbc0547d414d03b85727b807efa7d79817d9de7b36ecb5c7",
+      "bytes": 655000
+    },
+    "ro055_rm095/test.jsonl": {
+      "sha256": "a6d4436caffef1030d0788fc52ecccecce02054bb92c167e7f3df5ec0b696769",
+      "bytes": 1670600
+    },
+    "ro055_rm095/train.jsonl": {
+      "sha256": "d3d333eefa171e7f6ce768ba42a3bf26b3c186b9ba03c3ce3ef86157f2b77d67",
+      "bytes": 4464160
+    },
+    "ro075_rm075/dev.jsonl": {
+      "sha256": "46f0eb1f92c54c996069e89e7ed8c4607d098a72df6d7f527762a9a7c66dc981",
+      "bytes": 1604636
+    },
+    "ro075_rm075/ood.jsonl": {
+      "sha256": "aabeeb623d4609f58ce12b2ae77682b8817a6d400a9e129c9746a513f5ac28dd",
+      "bytes": 634084
+    },
+    "ro075_rm075/test.jsonl": {
+      "sha256": "3e77974f42c4fd1b39cfe20fd5a3cf7f7315d14da1c4bc7bca9aa96dcdb67d48",
+      "bytes": 1606934
+    },
+    "ro075_rm075/train.jsonl": {
+      "sha256": "3086332b855abab0676a4e2bb2ac5aa6c10109658c46ec1e76ddcd4a748874ff",
+      "bytes": 4297682
+    },
+    "ro095_rm055/dev.jsonl": {
+      "sha256": "b59b7b44113a8acd92898f632b198f6154bf72dd0e3d7df398d278bd8f50e3b1",
+      "bytes": 1667060
+    },
+    "ro095_rm055/ood.jsonl": {
+      "sha256": "e7a7f53a2bcf42a5df7b53c11c802cdceaccc67f82607aa3ce2edd71587b41a8",
+      "bytes": 654652
+    },
+    "ro095_rm055/test.jsonl": {
+      "sha256": "6c268a5a72fb13d5e2fa2913b70b1dc4e0ca98b4b5abd299b7a735820bb2b87b",
+      "bytes": 1669544
+    },
+    "ro095_rm055/train.jsonl": {
+      "sha256": "e3c5e6f2b37361e6ab8d27a03287605cf5d454e819ca30624cbca09d6d4fa170",
+      "bytes": 4461292
+    },
+    "vocabulary.json": {
+      "sha256": "2b33602f1f92b18f0f0c3679b1b64ce1933a7a9ff3b22ac1cf20606d18631d4b",
+      "bytes": 962
+    }
+  },
+  "license": "Not yet selected for public release",
+  "notes": [
+    "No expert linguistic review has been completed.",
+    "Artificial case markers and role mapping are stipulated.",
+    "OOD holds out event groups and increases clause count/depth."
+  ]
+}

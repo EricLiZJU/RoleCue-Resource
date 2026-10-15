@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use the RoleCue resource, please cite this software release and the associated paper when available."
+title: "RoleCue: Controlled Role-Cue Reliability and Cross-Position Binding Diagnostics"
+type: software
+version: 0.1.0rc3
+date-released: 2026-10-15
+authors:
+  - given-names: Hongyang
+    family-names: Li
+    affiliation: School of Public Affairs, Zhejiang University
+    email: hongyangli@zju.edu.cn
+  - given-names: Chao
+    family-names: Wu
+    affiliation: School of Public Affairs, Zhejiang University
+    email: chao.wu@zju.edu.cn
+repository-code: https://github.com/EricLiZJU/RoleCue-Resource
+license: MIT

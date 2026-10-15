@@ -1,0 +1,890 @@
+{
+  "ro055_rm095": {
+    "dev": {
+      "rows_validated": 2400,
+      "same_suffix_opposite_truth_different_posterior_pairs": 582,
+      "example": {
+        "record_ids": [
+          "v05:n009>n003:binding:q0:d1:h0",
+          "v05:n003>n009:binding:q1:d1:h0"
+        ],
+        "same_visible_suffix": [
+          "n027",
+          "<ACC>",
+          "v01",
+          "</REL>",
+          "<BIND>",
+          "<MASK>",
+          "<MASK>",
+          "<QUERY>",
+          "n009"
+        ],
+        "labels": [
+          1,
+          0
+        ],
+        "posteriors": [
+          0.9587155963302753,
+          0.041284403669724745
+        ]
+      },
+      "baselines": {
+        "binding": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.4498084484323014
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.6871354602362842,
+            "accuracy": 0.555,
+            "oracle_probability_mae": 0.44630844843230383
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.13962646376254986,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.009517239641092912
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.4498084484323014
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.1358653449737101,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.0
+          }
+        },
+        "local": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.1358653449737101,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.0
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.6871354602362842,
+            "accuracy": 0.555,
+            "oracle_probability_mae": 0.44630844843230383
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.13962646376254986,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.009517239641092912
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.1358653449737101,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.0
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.1358653449737101,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.0
+          }
+        }
+      },
+      "population_binding_suffix_posterior": 0.5,
+      "suffix_limit": "final 9 tokens",
+      "oracle_check": "analytic posterior, independent latent-state enumeration, visible-token parser"
+    },
+    "test": {
+      "rows_validated": 2400,
+      "same_suffix_opposite_truth_different_posterior_pairs": 588,
+      "example": {
+        "record_ids": [
+          "v07:n015>n048:binding:q0:d1:h0",
+          "v07:n048>n015:binding:q0:d1:h0"
+        ],
+        "same_visible_suffix": [
+          "n002",
+          "<ACC>",
+          "v01",
+          "</REL>",
+          "<BIND>",
+          "<MASK>",
+          "<MASK>",
+          "<QUERY>",
+          "n048"
+        ],
+        "labels": [
+          0,
+          1
+        ],
+        "posteriors": [
+          0.06043956043956051,
+          0.9587155963302753
+        ]
+      },
+      "baselines": {
+        "binding": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.44904224216150973
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.6991757019640169,
+            "accuracy": 0.495,
+            "oracle_probability_mae": 0.44954224216150845
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.13962646376254698,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.009586198205464356
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.44904224216150973
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.14068605167294895,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.0
+          }
+        },
+        "local": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.14068605167294895,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.0
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.6991757019640169,
+            "accuracy": 0.495,
+            "oracle_probability_mae": 0.44954224216150845
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.13962646376254698,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.009586198205464356
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.14068605167294895,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.0
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.14068605167294895,
+            "accuracy": 0.97,
+            "oracle_probability_mae": 0.0
+          }
+        }
+      },
+      "population_binding_suffix_posterior": 0.5,
+      "suffix_limit": "final 9 tokens",
+      "oracle_check": "analytic posterior, independent latent-state enumeration, visible-token parser"
+    },
+    "ood": {
+      "rows_validated": 800,
+      "same_suffix_opposite_truth_different_posterior_pairs": 194,
+      "example": {
+        "record_ids": [
+          "v05:n008>n003:binding:q0:d4:h2",
+          "v05:n003>n008:binding:q1:d4:h2"
+        ],
+        "same_visible_suffix": [
+          "v04",
+          "</REL>",
+          "</REL>",
+          "</REL>",
+          "<BIND>",
+          "<MASK>",
+          "<MASK>",
+          "<QUERY>",
+          "n008"
+        ],
+        "labels": [
+          1,
+          0
+        ],
+        "posteriors": [
+          0.9587155963302753,
+          0.041284403669724745
+        ]
+      },
+      "baselines": {
+        "binding": {
+          "suffix": {
+            "n": 400,
+            "nll": 0.6931471805599467,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.4491380179453578
+          },
+          "order_only": {
+            "n": 400,
+            "nll": 0.696165641532073,
+            "accuracy": 0.51,
+            "oracle_probability_mae": 0.4491380179453584
+          },
+          "marker_only": {
+            "n": 400,
+            "nll": 0.11018207397087858,
+            "accuracy": 0.98,
+            "oracle_probability_mae": 0.009577578384917906
+          },
+          "unbound": {
+            "n": 400,
+            "nll": 0.6931471805599467,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.4491380179453578
+          },
+          "full_oracle": {
+            "n": 400,
+            "nll": 0.10913404332791381,
+            "accuracy": 0.98,
+            "oracle_probability_mae": 0.0
+          }
+        },
+        "local": {
+          "suffix": {
+            "n": 400,
+            "nll": 0.10913404332791381,
+            "accuracy": 0.98,
+            "oracle_probability_mae": 0.0
+          },
+          "order_only": {
+            "n": 400,
+            "nll": 0.696165641532073,
+            "accuracy": 0.51,
+            "oracle_probability_mae": 0.4491380179453584
+          },
+          "marker_only": {
+            "n": 400,
+            "nll": 0.11018207397087858,
+            "accuracy": 0.98,
+            "oracle_probability_mae": 0.009577578384917906
+          },
+          "unbound": {
+            "n": 400,
+            "nll": 0.10913404332791381,
+            "accuracy": 0.98,
+            "oracle_probability_mae": 0.0
+          },
+          "full_oracle": {
+            "n": 400,
+            "nll": 0.10913404332791381,
+            "accuracy": 0.98,
+            "oracle_probability_mae": 0.0
+          }
+        }
+      },
+      "population_binding_suffix_posterior": 0.5,
+      "suffix_limit": "final 9 tokens",
+      "oracle_check": "analytic posterior, independent latent-state enumeration, visible-token parser"
+    }
+  },
+  "ro075_rm075": {
+    "dev": {
+      "rows_validated": 2400,
+      "same_suffix_opposite_truth_different_posterior_pairs": 510,
+      "example": {
+        "record_ids": [
+          "v05:n009>n003:binding:q0:d1:h0",
+          "v05:n003>n009:binding:q1:d1:h0"
+        ],
+        "same_visible_suffix": [
+          "n027",
+          "<ACC>",
+          "v01",
+          "</REL>",
+          "<BIND>",
+          "<MASK>",
+          "<MASK>",
+          "<QUERY>",
+          "n009"
+        ],
+        "labels": [
+          1,
+          0
+        ],
+        "posteriors": [
+          0.9,
+          0.5
+        ]
+      },
+      "baselines": {
+        "binding": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.23600000000000085
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.5952935132788443,
+            "accuracy": 0.72,
+            "oracle_probability_mae": 0.19100000000000225
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.5074045301853973,
+            "accuracy": 0.8,
+            "oracle_probability_mae": 0.19100000000000225
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.23600000000000085
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.423255908474461,
+            "accuracy": 0.76,
+            "oracle_probability_mae": 0.0
+          }
+        },
+        "local": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.423255908474461,
+            "accuracy": 0.76,
+            "oracle_probability_mae": 0.0
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.5952935132788443,
+            "accuracy": 0.72,
+            "oracle_probability_mae": 0.19100000000000225
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.5074045301853973,
+            "accuracy": 0.8,
+            "oracle_probability_mae": 0.19100000000000225
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.423255908474461,
+            "accuracy": 0.76,
+            "oracle_probability_mae": 0.0
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.423255908474461,
+            "accuracy": 0.76,
+            "oracle_probability_mae": 0.0
+          }
+        }
+      },
+      "population_binding_suffix_posterior": 0.5,
+      "suffix_limit": "final 9 tokens",
+      "oracle_check": "analytic posterior, independent latent-state enumeration, visible-token parser"
+    },
+    "test": {
+      "rows_validated": 2400,
+      "same_suffix_opposite_truth_different_posterior_pairs": 426,
+      "example": {
+        "record_ids": [
+          "v02:n029>n032:binding:q0:d1:h0",
+          "v02:n032>n029:binding:q1:d1:h0"
+        ],
+        "same_visible_suffix": [
+          "n040",
+          "<ACC>",
+          "v01",
+          "</REL>",
+          "<BIND>",
+          "<MASK>",
+          "<MASK>",
+          "<QUERY>",
+          "n029"
+        ],
+        "labels": [
+          1,
+          0
+        ],
+        "posteriors": [
+          0.9,
+          0.09999999999999998
+        ]
+      },
+      "baselines": {
+        "binding": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.23400000000000096
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.6117726976088669,
+            "accuracy": 0.705,
+            "oracle_probability_mae": 0.19150000000000209
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.5623351446188013,
+            "accuracy": 0.75,
+            "oracle_probability_mae": 0.19150000000000209
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.23400000000000096
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.492111579119055,
+            "accuracy": 0.7275,
+            "oracle_probability_mae": 0.0
+          }
+        },
+        "local": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.492111579119055,
+            "accuracy": 0.7275,
+            "oracle_probability_mae": 0.0
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.6117726976088669,
+            "accuracy": 0.705,
+            "oracle_probability_mae": 0.19150000000000209
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.5623351446188013,
+            "accuracy": 0.75,
+            "oracle_probability_mae": 0.19150000000000209
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.492111579119055,
+            "accuracy": 0.7275,
+            "oracle_probability_mae": 0.0
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.492111579119055,
+            "accuracy": 0.7275,
+            "oracle_probability_mae": 0.0
+          }
+        }
+      },
+      "population_binding_suffix_posterior": 0.5,
+      "suffix_limit": "final 9 tokens",
+      "oracle_check": "analytic posterior, independent latent-state enumeration, visible-token parser"
+    },
+    "ood": {
+      "rows_validated": 800,
+      "same_suffix_opposite_truth_different_posterior_pairs": 154,
+      "example": {
+        "record_ids": [
+          "v05:n008>n003:binding:q0:d4:h2",
+          "v05:n003>n008:binding:q1:d4:h2"
+        ],
+        "same_visible_suffix": [
+          "v04",
+          "</REL>",
+          "</REL>",
+          "</REL>",
+          "<BIND>",
+          "<MASK>",
+          "<MASK>",
+          "<QUERY>",
+          "n008"
+        ],
+        "labels": [
+          1,
+          0
+        ],
+        "posteriors": [
+          0.9,
+          0.09999999999999998
+        ]
+      },
+      "baselines": {
+        "binding": {
+          "suffix": {
+            "n": 400,
+            "nll": 0.6931471805599467,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.2520000000000009
+          },
+          "order_only": {
+            "n": 400,
+            "nll": 0.5952935132788552,
+            "accuracy": 0.72,
+            "oracle_probability_mae": 0.18700000000000006
+          },
+          "marker_only": {
+            "n": 400,
+            "nll": 0.551349021732131,
+            "accuracy": 0.76,
+            "oracle_probability_mae": 0.18700000000000006
+          },
+          "unbound": {
+            "n": 400,
+            "nll": 0.6931471805599467,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.2520000000000009
+          },
+          "full_oracle": {
+            "n": 400,
+            "nll": 0.4876334249718253,
+            "accuracy": 0.74,
+            "oracle_probability_mae": 0.0
+          }
+        },
+        "local": {
+          "suffix": {
+            "n": 400,
+            "nll": 0.4876334249718253,
+            "accuracy": 0.74,
+            "oracle_probability_mae": 0.0
+          },
+          "order_only": {
+            "n": 400,
+            "nll": 0.5952935132788552,
+            "accuracy": 0.72,
+            "oracle_probability_mae": 0.18700000000000006
+          },
+          "marker_only": {
+            "n": 400,
+            "nll": 0.551349021732131,
+            "accuracy": 0.76,
+            "oracle_probability_mae": 0.18700000000000006
+          },
+          "unbound": {
+            "n": 400,
+            "nll": 0.4876334249718253,
+            "accuracy": 0.74,
+            "oracle_probability_mae": 0.0
+          },
+          "full_oracle": {
+            "n": 400,
+            "nll": 0.4876334249718253,
+            "accuracy": 0.74,
+            "oracle_probability_mae": 0.0
+          }
+        }
+      },
+      "population_binding_suffix_posterior": 0.5,
+      "suffix_limit": "final 9 tokens",
+      "oracle_check": "analytic posterior, independent latent-state enumeration, visible-token parser"
+    }
+  },
+  "ro095_rm055": {
+    "dev": {
+      "rows_validated": 2400,
+      "same_suffix_opposite_truth_different_posterior_pairs": 576,
+      "example": {
+        "record_ids": [
+          "v05:n009>n003:binding:q0:d1:h0",
+          "v05:n003>n009:binding:q1:d1:h0"
+        ],
+        "same_visible_suffix": [
+          "n027",
+          "<ACC>",
+          "v01",
+          "</REL>",
+          "<BIND>",
+          "<MASK>",
+          "<MASK>",
+          "<QUERY>",
+          "n009"
+        ],
+        "labels": [
+          1,
+          0
+        ],
+        "posteriors": [
+          0.9587155963302753,
+          0.06043956043956045
+        ]
+      },
+      "baselines": {
+        "binding": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.44961689686460593
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.24268182803337524,
+            "accuracy": 0.935,
+            "oracle_probability_mae": 0.009534479282185752
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.6921522276228376,
+            "accuracy": 0.53,
+            "oracle_probability_mae": 0.4471168968646025
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.44961689686460593
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.2421325928739663,
+            "accuracy": 0.935,
+            "oracle_probability_mae": 0.0
+          }
+        },
+        "local": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.2421325928739663,
+            "accuracy": 0.935,
+            "oracle_probability_mae": 0.0
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.24268182803337524,
+            "accuracy": 0.935,
+            "oracle_probability_mae": 0.009534479282185752
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.6921522276228376,
+            "accuracy": 0.53,
+            "oracle_probability_mae": 0.4471168968646025
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.2421325928739663,
+            "accuracy": 0.935,
+            "oracle_probability_mae": 0.0
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.2421325928739663,
+            "accuracy": 0.935,
+            "oracle_probability_mae": 0.0
+          }
+        }
+      },
+      "population_binding_suffix_posterior": 0.5,
+      "suffix_limit": "final 9 tokens",
+      "oracle_check": "analytic posterior, independent latent-state enumeration, visible-token parser"
+    },
+    "test": {
+      "rows_validated": 2400,
+      "same_suffix_opposite_truth_different_posterior_pairs": 570,
+      "example": {
+        "record_ids": [
+          "v07:n015>n048:binding:q0:d1:h0",
+          "v07:n048>n015:binding:q0:d1:h0"
+        ],
+        "same_visible_suffix": [
+          "n002",
+          "<ACC>",
+          "v01",
+          "</REL>",
+          "<BIND>",
+          "<MASK>",
+          "<MASK>",
+          "<QUERY>",
+          "n048"
+        ],
+        "labels": [
+          0,
+          1
+        ],
+        "posteriors": [
+          0.9587155963302753,
+          0.9395604395604396
+        ]
+      },
+      "baselines": {
+        "binding": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.4502873273515459
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.21323743824170882,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.009474140538360726
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.6891421671909044,
+            "accuracy": 0.545,
+            "oracle_probability_mae": 0.44428732735155096
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.6931471805599252,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.4502873273515459
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.21599523580030155,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.0
+          }
+        },
+        "local": {
+          "suffix": {
+            "n": 1200,
+            "nll": 0.21599523580030155,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.0
+          },
+          "order_only": {
+            "n": 1200,
+            "nll": 0.21323743824170882,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.009474140538360726
+          },
+          "marker_only": {
+            "n": 1200,
+            "nll": 0.6891421671909044,
+            "accuracy": 0.545,
+            "oracle_probability_mae": 0.44428732735155096
+          },
+          "unbound": {
+            "n": 1200,
+            "nll": 0.21599523580030155,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.0
+          },
+          "full_oracle": {
+            "n": 1200,
+            "nll": 0.21599523580030155,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.0
+          }
+        }
+      },
+      "population_binding_suffix_posterior": 0.5,
+      "suffix_limit": "final 9 tokens",
+      "oracle_check": "analytic posterior, independent latent-state enumeration, visible-token parser"
+    },
+    "ood": {
+      "rows_validated": 800,
+      "same_suffix_opposite_truth_different_posterior_pairs": 190,
+      "example": {
+        "record_ids": [
+          "v05:n008>n003:binding:q0:d4:h2",
+          "v05:n003>n008:binding:q1:d4:h2"
+        ],
+        "same_visible_suffix": [
+          "v04",
+          "</REL>",
+          "</REL>",
+          "</REL>",
+          "<BIND>",
+          "<MASK>",
+          "<MASK>",
+          "<QUERY>",
+          "n008"
+        ],
+        "labels": [
+          1,
+          0
+        ],
+        "posteriors": [
+          0.9395604395604396,
+          0.06043956043956045
+        ]
+      },
+      "baselines": {
+        "binding": {
+          "suffix": {
+            "n": 400,
+            "nll": 0.6931471805599467,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.45038310313539737
+          },
+          "order_only": {
+            "n": 400,
+            "nll": 0.21323743824170344,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.009465520717814367
+          },
+          "marker_only": {
+            "n": 400,
+            "nll": 0.6841253998043445,
+            "accuracy": 0.57,
+            "oracle_probability_mae": 0.4438831031353974
+          },
+          "unbound": {
+            "n": 400,
+            "nll": 0.6931471805599467,
+            "accuracy": 0.5,
+            "oracle_probability_mae": 0.45038310313539737
+          },
+          "full_oracle": {
+            "n": 400,
+            "nll": 0.2118809102923111,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.0
+          }
+        },
+        "local": {
+          "suffix": {
+            "n": 400,
+            "nll": 0.2118809102923111,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.0
+          },
+          "order_only": {
+            "n": 400,
+            "nll": 0.21323743824170344,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.009465520717814367
+          },
+          "marker_only": {
+            "n": 400,
+            "nll": 0.6841253998043445,
+            "accuracy": 0.57,
+            "oracle_probability_mae": 0.4438831031353974
+          },
+          "unbound": {
+            "n": 400,
+            "nll": 0.2118809102923111,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.0
+          },
+          "full_oracle": {
+            "n": 400,
+            "nll": 0.2118809102923111,
+            "accuracy": 0.945,
+            "oracle_probability_mae": 0.0
+          }
+        }
+      },
+      "population_binding_suffix_posterior": 0.5,
+      "suffix_limit": "final 9 tokens",
+      "oracle_check": "analytic posterior, independent latent-state enumeration, visible-token parser"
+    }
+  }
+}

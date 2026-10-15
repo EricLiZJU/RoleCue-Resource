@@ -1,0 +1,103 @@
+{
+  "device": "mps",
+  "cpu_threads": 4,
+  "deterministic_algorithms": true,
+  "models": {
+    "rnn": {
+      "embedding_dim": 64,
+      "hidden_size": 672,
+      "layers": 1,
+      "dropout": 0.1
+    },
+    "lstm": {
+      "embedding_dim": 64,
+      "hidden_size": 320,
+      "layers": 1,
+      "dropout": 0.1
+    },
+    "transformer": {
+      "embedding_dim": 128,
+      "heads": 4,
+      "layers": 2,
+      "feedforward": 672,
+      "max_length": 16,
+      "dropout": 0.1
+    }
+  },
+  "training": {
+    "epochs": 20,
+    "batch_size": 128,
+    "gradient_clip": 1,
+    "log_every_steps": 250,
+    "early_eval_seen_examples": [
+      1024,
+      4992,
+      19968,
+      49920,
+      99968,
+      200000,
+      400000
+    ]
+  },
+  "training_by_model": {
+    "rnn": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.1
+    },
+    "lstm": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.1
+    },
+    "transformer": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01
+    }
+  },
+  "dev_gates": {
+    "perfect_accuracy_min": 0.98,
+    "uninformative_accuracy_min": 0.4,
+    "uninformative_accuracy_max": 0.6,
+    "uninformative_nll_regret_max": 0.05,
+    "smoke_accuracy_gap_max": 0.05,
+    "smoke_nll_regret_max": 0.05
+  },
+  "require_last_checkpoint": true,
+  "evaluate_baselines": true,
+  "bag_of_words": {
+    "l2": 0.0001,
+    "max_iter": 50
+  },
+  "primary_endpoints": [
+    "iid_oracle_nll_regret",
+    "iid_conflict_oracle_probability_mae",
+    "paired_signed_effect_deviation"
+  ],
+  "experiment": "formal_noise_replication_v1",
+  "status": "frozen_before_formal_test_access",
+  "dataset": "archived-source:Synthetic_noise_replication_v1_20261013",
+  "stage": "noise_replication",
+  "conditions": [
+    "ro055_rm095",
+    "ro075_rm075",
+    "ro095_rm055"
+  ],
+  "training_seeds": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "expected_sizes": {
+    "train": 200000,
+    "dev": 20000,
+    "test": 20000
+  },
+  "boundary_conditions": [],
+  "stop_on_dev_gate_failure": false,
+  "scope": "Formal noise_replication follow-up; representative conditions x 3 architectures x 5 matched seeds.",
+  "provenance": {
+    "parent_frozen_config_sha256": "5398723cca83bc4c5e48425753aa853cb7ede81b759cf1c4ed56378e4d4f2a05",
+    "data_manifest_sha256": "7ad6b179d9d129876b068678764440a19284b285a611b85a8dc9a5774789e541"
+  }
+}

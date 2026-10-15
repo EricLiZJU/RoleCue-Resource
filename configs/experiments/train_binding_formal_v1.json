@@ -1,0 +1,28 @@
+{
+  "experiment": "rolecue_binding_formal_v1",
+  "status": "frozen_after_development_before_formal_test_scoring",
+  "dataset": "data/binding_formal_v1_20261015",
+  "conditions": ["ro055_rm095", "ro075_rm075", "ro095_rm055"],
+  "training_seeds": [11, 12, 13, 14, 15],
+  "device": "mps",
+  "cpu_threads": 4,
+  "deterministic_algorithms": true,
+  "models": {
+    "rnn": {"embedding_dim": 32, "hidden_size": 245, "layers": 1, "dropout": 0.1},
+    "lstm": {"embedding_dim": 32, "hidden_size": 115, "layers": 1, "dropout": 0.1},
+    "transformer": {"embedding_dim": 64, "heads": 4, "layers": 2, "feedforward": 128,
+                    "max_length": 64, "dropout": 0.1, "position_encoding": "sinusoidal"}
+  },
+  "training": {"epochs": 8, "batch_size": 64, "gradient_clip": 1,
+               "log_every_steps": 100, "early_eval_seen_examples": []},
+  "training_by_model": {
+    "rnn": {"learning_rate": 0.001, "weight_decay": 0.1},
+    "lstm": {"learning_rate": 0.001, "weight_decay": 0.1},
+    "transformer": {"learning_rate": 0.001, "weight_decay": 0.01}
+  },
+  "primary_endpoints": ["binding_test_oracle_nll_regret", "binding_test_posterior_mae",
+                        "local_minus_binding_oracle_regret", "binding_suffix_vs_full_oracle_nll"],
+  "secondary_endpoints": ["length_matched_d2_h0_vs_d2_h1", "held_out_groups_d4_h2",
+                          "all_training_seed_values"],
+  "scope": "45 formal runs: three reliability settings, three architectures, five seeds. Shared mixed-version training distribution; dev NLL selects checkpoints. Event-group held-out IID and OOD tests, with test/ood opened only after frozen configuration. No requirement for architecture differences."
+}

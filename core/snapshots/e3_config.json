@@ -1,0 +1,106 @@
+{
+  "experiment": "formal_e3_distance_hierarchy_v1",
+  "status": "frozen_before_formal_test_access",
+  "dataset": "archived-source:Synthetic_e3_formal_v1_20261013",
+  "stage": "formal",
+  "conditions": [
+    "ro055_rm095",
+    "ro075_rm075",
+    "ro095_rm055"
+  ],
+  "training_seeds": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "device": "mps",
+  "cpu_threads": 4,
+  "deterministic_algorithms": true,
+  "models": {
+    "rnn": {
+      "embedding_dim": 64,
+      "hidden_size": 672,
+      "layers": 1,
+      "dropout": 0.1
+    },
+    "lstm": {
+      "embedding_dim": 64,
+      "hidden_size": 320,
+      "layers": 1,
+      "dropout": 0.1
+    },
+    "transformer": {
+      "embedding_dim": 128,
+      "heads": 4,
+      "layers": 2,
+      "feedforward": 672,
+      "max_length": 128,
+      "dropout": 0.1,
+      "position_encoding": "sinusoidal"
+    }
+  },
+  "training": {
+    "epochs": 20,
+    "batch_size": 128,
+    "gradient_clip": 1,
+    "log_every_steps": 250,
+    "early_eval_seen_examples": [
+      1024,
+      4992,
+      19968,
+      49920,
+      99968,
+      200000,
+      400000
+    ]
+  },
+  "training_by_model": {
+    "rnn": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.1
+    },
+    "lstm": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.1
+    },
+    "transformer": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.01
+    }
+  },
+  "expected_sizes": {
+    "train": 200000,
+    "dev": 20000,
+    "test": 20000
+  },
+  "boundary_conditions": [],
+  "dev_gates": {
+    "perfect_accuracy_min": 0.98,
+    "uninformative_accuracy_min": 0.4,
+    "uninformative_accuracy_max": 0.6,
+    "uninformative_nll_regret_max": 0.05,
+    "smoke_accuracy_gap_max": 0.06,
+    "smoke_nll_regret_max": 0.06
+  },
+  "stop_on_dev_gate_failure": false,
+  "require_last_checkpoint": true,
+  "evaluate_baselines": true,
+  "bag_of_words": {
+    "l2": 0.0001,
+    "max_iter": 50
+  },
+  "primary_endpoints": [
+    "iid_oracle_nll_regret",
+    "iid_conflict_oracle_probability_mae",
+    "paired_signed_effect_deviation"
+  ],
+  "scope": "Formal E3: structured distractors, train d0/d2/d4 and d8-h1; sealed OOD d8/d16-h2/d32-h3; context 128, no truncation; sinusoidal positions; 3 conditions x 3 architectures x 5 seeds.",
+  "provenance": {
+    "e3_smoke_manifest_sha256": "0c0b7b383fb91c34f8bc7fe560dec0e43e6d5920a0801914f14e533389065eeb",
+    "e3_smoke_verification_sha256": "ad6dce72623be54958684282faaed9169663bb19960ba127dbc7888a78969290",
+    "smoke_gates_passed": "9/9",
+    "test_files_opened": false
+  }
+}

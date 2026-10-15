@@ -1,0 +1,29 @@
+{
+  "n": 2400,
+  "accuracy": 0.50125,
+  "nll": 0.7331923277775383,
+  "brier": 0.268201529977203,
+  "oracle_accuracy": 0.935,
+  "oracle_nll": 0.24213259287396818,
+  "oracle_nll_regret": 0.49105973490357013,
+  "oracle_probability_mae": 0.4475105775909151,
+  "oracle_probability_signed_bias": 0.04321905755173082,
+  "oracle_posterior_kl": 0.5319748767176229,
+  "mean_p_query_agent": 0.5432190575517307,
+  "conflict": {
+    "n": 1140,
+    "accuracy": 0.5087719298245614,
+    "oracle_probability_mae": 0.43466479492459487,
+    "oracle_probability_signed_bias": 0.043473769970461734,
+    "oracle_posterior_kl": 0.4993220463493416,
+    "mean_p_query_agent": 0.5434737699704617
+  },
+  "aligned": {
+    "n": 1260,
+    "accuracy": 0.49444444444444446,
+    "oracle_probability_mae": 0.45913295238425245,
+    "oracle_probability_signed_bias": 0.042988603458593344,
+    "oracle_posterior_kl": 0.5615179137174964,
+    "mean_p_query_agent": 0.5429886034585933
+  }
+}
